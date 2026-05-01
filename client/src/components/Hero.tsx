@@ -43,16 +43,16 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.1),rgba(0,0,0,0.45)_70%,rgba(0,0,0,0.72))]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center pt-24">
-        <p className="text-blue-700 font-medium text-xs md:text-sm tracking-[0.35em] uppercase mb-6">
+        <p className="text-white/90 font-medium text-xs md:text-sm tracking-[0.35em] uppercase mb-6">
           Independent Hospitality & Board Advisory
         </p>
 
         <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl font-semibold text-white leading-tight mb-6">
           Dr. Sanjay Sethi
-          <span className="block text-gold-500 mt-2">Advisory</span>
+          <span className="block text-white mt-2">Advisory</span>
         </h1>
 
-        <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-light max-w-4xl mx-auto mb-6 leading-relaxed">
+        <p className="text-lg md:text-xl lg:text-2xl text-white font-light max-w-4xl mx-auto mb-6 leading-relaxed">
           Advisory anchored in lived experience across the business of operating and investing in hotels.
         </p>
 
