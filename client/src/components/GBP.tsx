@@ -31,7 +31,7 @@ export default function GBP() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <Badge variant="secondary" className="mb-5 px-3 py-1.5">
-            The Give Back Project
+            The Give Back Project (GBP)
           </Badge>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
             A Non-Commercial Initiative for the Next Generation

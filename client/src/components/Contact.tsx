@@ -143,7 +143,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="designation">Designation</Label>
+                  <Label htmlFor="designation">Designation (Consultant, Owner / CEO, Senior Management)</Label>
                   <Select value={formData.designation} onValueChange={handleDesignationChange}>
                     <SelectTrigger id="designation" data-testid="select-designation">
                       <SelectValue placeholder="Select designation" />
