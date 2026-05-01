@@ -2,6 +2,7 @@ import { Badge } from "@/components/ui/badge";
 import { Building2, Award, TrendingUp, Users, Compass } from "lucide-react";
 
 const credentials = [
+  { label: "Ph.D. Honoris Causa", icon: Award },
   { label: "CHA Certified", icon: Award },
   { label: "IHM Pusa", icon: Building2 },
   { label: "IIM Bangalore", icon: Building2 },
