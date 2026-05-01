@@ -6,8 +6,8 @@ const navItems = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Experience", href: "#experience" },
-  { label: "GBP", href: "#gbp" },
   { label: "Contact", href: "#contact" },
+  { label: "GBP", href: "/gbp" },
 ];
 
 export default function Header() {
@@ -23,6 +23,11 @@ export default function Header() {
   }, []);
 
   const scrollToSection = (href: string) => {
+    if (href.startsWith("/")) {
+      window.location.href = href;
+      setIsMobileMenuOpen(false);
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });

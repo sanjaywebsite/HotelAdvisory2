@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
-            {["About", "Services", "Experience", "GBP", "Contact"].map((item) => (
+            {["About", "Services", "Experience", "Contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(`#${item.toLowerCase()}`)}
@@ -38,6 +38,13 @@ export default function Footer() {
                 {item}
               </button>
             ))}
+            <button
+              onClick={() => scrollToSection("/gbp")}
+              className="text-sm text-background/70 hover:text-background transition-colors"
+              data-testid="footer-link-gbp"
+            >
+              GBP
+            </button>
             <a
               href="https://www.linkedin.com/in/sanjaysethi08/"
               target="_blank"
