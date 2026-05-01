@@ -24,10 +24,10 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // todo: remove mock functionality - connect to actual API
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    
+
     console.log("Form submitted:", formData);
     setIsSubmitting(false);
     setIsSubmitted(true);
@@ -46,11 +46,11 @@ export default function Contact() {
               Get In Touch
             </p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
-              Let's Discuss Your Goals
+              Let’s Discuss an Advisory Mandate
             </h2>
-            <p className="text-lg text-muted-foreground mb-10">
-              For institutional investors, owners, developers, and funds seeking experienced 
-              guidance in India's hospitality sector.
+            <p className="text-lg text-muted-foreground mb-10 max-w-xl">
+              For institutional investors, owners, developers, and boards seeking a discreet,
+              high-trust advisory conversation.
             </p>
 
             <div className="space-y-6">
@@ -90,7 +90,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">LinkedIn</p>
-                  <p className="font-medium">Connect on LinkedIn</p>
+                  <p className="font-medium">View executive profile</p>
                 </div>
               </a>
             </div>
@@ -103,7 +103,7 @@ export default function Contact() {
                 <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">
                   Thank You
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground max-w-sm">
                   Your message has been received. I will respond within 48 hours.
                 </p>
               </div>
@@ -154,8 +154,8 @@ export default function Contact() {
                   <Textarea
                     id="message"
                     name="message"
-                    placeholder="Tell me about your advisory needs..."
-                    rows={5}
+                    placeholder="Tell me about the advisory mandate you would like to discuss..."
+                    rows={6}
                     value={formData.message}
                     onChange={handleChange}
                     required

@@ -1,49 +1,49 @@
 import { Card } from "@/components/ui/card";
-import { TrendingUp, Settings, Compass, Users } from "lucide-react";
+import { TrendingUp, Settings, Compass, Users, ArrowRight } from "lucide-react";
 
 const services = [
   {
     icon: TrendingUp,
     title: "Investment Advisory",
-    description: "Strategic guidance for hospitality investments",
+    description: "For capital decisions that require operator judgment.",
     points: [
-      "Sector outlook and market intelligence",
-      "Underwriting support and due diligence",
-      "Deal frameworks and structuring",
-      "Operator selection and negotiations",
+      "Sector outlook and demand mapping",
+      "Underwriting support and deal framing",
+      "Operator selection and negotiation strategy",
+      "Risk review across assumptions and capital structure",
     ],
   },
   {
     icon: Settings,
     title: "Operational Excellence",
-    description: "Driving performance and brand value",
+    description: "For owners seeking stronger asset performance.",
     points: [
-      "Performance uplift strategies",
-      "Brand architecture and positioning",
-      "Asset strategy optimization",
-      "Operational benchmarking",
+      "Performance uplift and KPI review",
+      "Brand architecture and asset strategy",
+      "Efficiency, service, and operating model review",
+      "Asset repositioning for premium outcomes",
     ],
   },
   {
     icon: Compass,
     title: "Strategic Foresight",
-    description: "Long-term market perspective",
+    description: "For long-range decisions in a changing market.",
     points: [
-      "India hospitality market mapping",
-      "ESG integration and sustainability",
-      "Long-term demand signal analysis",
-      "Competitive landscape assessment",
+      "India hospitality mapping",
+      "ESG and future-demand signals",
+      "Competitive and micro-market analysis",
+      "Scenario planning for growth and resilience",
     ],
   },
   {
     icon: Users,
     title: "Owner & Board Advisory",
-    description: "Strategic clarity for decision-makers",
+    description: "For boards that need clarity, not noise.",
     points: [
       "Board-level strategic counsel",
-      "Investor communication support",
-      "Developer partnership guidance",
-      "Fund strategy alignment",
+      "Investor and developer alignment",
+      "Capital allocation and governance perspective",
+      "Confidential second opinion on key decisions",
     ],
   },
 ];
@@ -57,10 +57,10 @@ export default function Services() {
             What I Offer
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
-            Comprehensive Advisory Services
+            Senior Advisory Across the Hotel Value Chain
           </h2>
           <p className="text-lg text-muted-foreground">
-            Decision-grade guidance across the full spectrum of hospitality investment and operations
+            A concise offering for institutions, owners, developers, and boards.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export default function Services() {
               <ul className="space-y-3">
                 {service.points.map((point) => (
                   <li key={point} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                    <ArrowRight className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
                     {point}
                   </li>
                 ))}
