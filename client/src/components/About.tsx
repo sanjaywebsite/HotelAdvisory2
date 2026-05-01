@@ -32,7 +32,7 @@ export default function About() {
                 37 years across hotels and resorts, spanning luxury, upper-upscale, mid-market, and select business-led properties — with lived experience across the full cycle of ownership, development, operations, growth, and governance.
               </p>
               <p>
-                My work has covered India and select global geographies, with direct exposure to diverse markets, guest segments, and capital contexts. I have also worked closely across adjacent sectors including airlines, retail, lifestyle, F&B, wellness, and real estate.
+                My work has covered India and select global geographies, with direct exposure to diverse markets, guest segments, and capital contexts. I have also worked closely across adjacent sectors including airlines, retail, luxury lifestyle, F&B, wellness, and real estate.
               </p>
               <p>
                 The advisory is selective by design: built for decisions that require experience, discretion, and a dual lens of owners and operators.
