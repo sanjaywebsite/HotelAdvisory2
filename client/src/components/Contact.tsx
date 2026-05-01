@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Mail, MapPin, Linkedin, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -14,6 +15,7 @@ export default function Contact() {
     name: "",
     email: "",
     company: "",
+    designation: "",
     message: "",
   });
 
@@ -21,11 +23,14 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
+  const handleDesignationChange = (value: string) => {
+    setFormData((prev) => ({ ...prev, designation: value }));
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // todo: remove mock functionality - connect to actual API
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     console.log("Form submitted:", formData);
@@ -135,6 +140,20 @@ export default function Contact() {
                       data-testid="input-email"
                     />
                   </div>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="designation">Designation</Label>
+                  <Select value={formData.designation} onValueChange={handleDesignationChange}>
+                    <SelectTrigger id="designation" data-testid="select-designation">
+                      <SelectValue placeholder="Select designation" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="consultant">Consultant</SelectItem>
+                      <SelectItem value="owner-ceo">Owner / CEO</SelectItem>
+                      <SelectItem value="senior-management">Senior Management</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 <div className="space-y-2">
