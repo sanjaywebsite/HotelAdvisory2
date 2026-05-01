@@ -44,7 +44,7 @@ export default function About() {
                 Recognition
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                With full honour conferred upon Sanjay Sethi, the Degree of Doctor of Philosophy (Ph.D.) Honoris Causa in 2024.
+                Ph.D. Honoris Causa, 2024.
               </p>
             </div>
 
