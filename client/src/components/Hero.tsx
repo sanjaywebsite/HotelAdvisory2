@@ -101,7 +101,7 @@ export default function Hero() {
       </div>
 
       <button
-        onClick={scrollToAbout}
+        onClick={scrollToContact}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors animate-bounce"
         aria-label="Scroll to content"
         data-testid="button-scroll-down"
