@@ -47,6 +47,9 @@ export default function About() {
                 Ph.D. Honoris Causa, 2024.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-3">
+                Hall of Fame - Hotelier India 2019.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-3">
                 Certified Independent Director - IICA.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-3">
