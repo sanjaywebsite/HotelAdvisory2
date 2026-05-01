@@ -1,6 +1,6 @@
 const timeline = [
   {
-    period: "1988 - 2006",
+    period: "1991 - 2006",
     role: "Senior Leadership Roles",
     company: "Taj Group of Hotels (IHCL)",
     description:
