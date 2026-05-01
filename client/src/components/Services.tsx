@@ -41,7 +41,7 @@ const services = [
     description: "For boards that need clarity, not noise.",
     points: [
       "Board-level strategic counsel",
-      "Investor and developer alignment",
+      "Investor, developer, and partner alignment",
       "Capital allocation and governance perspective",
       "Confidential second opinion on key decisions",
     ],

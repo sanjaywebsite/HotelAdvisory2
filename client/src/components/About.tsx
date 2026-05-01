@@ -10,7 +10,7 @@ const credentials = [
 
 const highlights = [
   { icon: Building2, value: "37+", label: "Years in Hospitality" },
-  { icon: TrendingUp, value: "IPO", label: "Leadership" },
+  { icon: TrendingUp, value: "Multi-Market", label: "Growth Leadership" },
   { icon: Users, value: "Board", label: "Advisory" },
   { icon: Compass, value: "Global", label: "Investor Reach" },
 ];
@@ -25,20 +25,17 @@ export default function About() {
               Who I Am
             </p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
-              A Career Built on Operating Discipline and Strategic Judgment
+              A Career Built on Operating Depth and Strategic Judgment
             </h2>
             <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
               <p>
-                Leadership across Taj, Keys, and Chalet Hotels, shaped by execution in real businesses —
-                from asset strategy and brand building to capital allocation and board counsel.
+                37 years across hotels and resorts, spanning luxury, upper-upscale, mid-market, and select business-led properties — with lived experience across the full cycle of ownership, development, operations, growth, and governance.
               </p>
               <p>
-                I have led hotels, created portfolios, guided IPO readiness, and worked with owners,
-                developers, funds, and global investors looking for grounded judgment in a complex market.
+                My work has covered India and select global geographies, with direct exposure to diverse markets, guest segments, and capital contexts. I have also worked closely across adjacent sectors including airlines, retail, lifestyle, F&B, wellness, and real estate.
               </p>
               <p>
-                The advisory is selective by design: built for decisions that require experience,
-                discretion, and an operator’s lens.
+                The advisory is selective by design: built for decisions that require experience, discretion, and an operator’s lens.
               </p>
             </div>
 
@@ -79,7 +76,7 @@ export default function About() {
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 Independent senior advisory for hospitality investors, owners, and boards seeking a calm,
-                experienced voice on growth, governance, and long-term value creation.
+                experienced voice on growth, governance, talent, stakeholder relationships, and long-term value creation.
               </p>
             </div>
           </div>

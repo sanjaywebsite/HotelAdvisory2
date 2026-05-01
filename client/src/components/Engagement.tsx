@@ -18,8 +18,7 @@ export default function Engagement() {
           Selective Senior Advisory
         </h2>
         <p className="text-lg text-muted-foreground mb-10 max-w-2xl mx-auto">
-          A focused, high-touch engagement model aligned with investor strategic goals. 
-          Limited availability ensures dedicated attention and meaningful impact.
+          A focused, high-trust model aligned with strategic outcomes for hospitality, related sectors, and board-level decision making.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 lg:gap-6">
