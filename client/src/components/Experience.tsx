@@ -4,7 +4,7 @@ const timeline = [
     role: "Senior Leadership Roles",
     company: "Taj Group of Hotels (IHCL)",
     description:
-      "14 years of progressive leadership including General Manager and Area Director positions, building deep operational expertise across luxury hospitality.",
+      "14 years of progressive leadership including General Manager and Area Director positions, building deep operational expertise across luxury hospitality. Assessor of Tata group Companies (TBEM).",
     highlight: "Operational Mastery",
   },
   {
