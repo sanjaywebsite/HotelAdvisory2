@@ -41,10 +41,10 @@ export default function About() {
 
             <div className="mt-6 p-6 lg:p-8 rounded-md bg-card border border-card-border">
               <p className="text-sm font-medium uppercase tracking-widest text-primary mb-3">
-                Recognition
+                Executive Positioning
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Ph.D. Honoris Causa, 2024.
+                Independent senior advisory for hospitality and adjacent industries, serving investors, owners, and boards seeking a calm, experienced voice on growth, governance, talent, stakeholder relationships, and long-term value creation.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-3">
                 Certified Independent Director - IICA.
@@ -84,11 +84,10 @@ export default function About() {
 
             <div className="mt-6 p-6 lg:p-8 rounded-md bg-card border border-card-border">
               <p className="text-sm font-medium uppercase tracking-widest text-primary mb-3">
-                Executive Positioning
+                Recognition
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Independent senior advisory for hospitality investors, owners, and boards seeking a calm,
-                experienced voice on growth, governance, talent, stakeholder relationships, and long-term value creation.
+                Ph.D. Honoris Causa, 2024.
               </p>
             </div>
           </div>
