@@ -48,7 +48,7 @@ export default function Hero() {
         </p>
 
         <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl font-semibold text-white leading-tight mb-6">
-          Sanjay Sethi
+          Dr. Sanjay Sethi
           <span className="block text-primary mt-2">Advisory</span>
         </h1>
 

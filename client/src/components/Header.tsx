@@ -46,7 +46,7 @@ export default function Header() {
             data-testid="link-logo"
           >
             <span className={isScrolled ? "text-foreground" : "text-white"}>
-              Sanjay Sethi
+              Dr. Sanjay Sethi
             </span>
             <span className={`ml-2 font-normal ${isScrolled ? "text-primary" : "text-primary"}`}>
               Advisory

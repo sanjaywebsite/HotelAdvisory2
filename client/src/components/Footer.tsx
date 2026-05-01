@@ -20,7 +20,7 @@ export default function Footer() {
               className="font-serif text-2xl font-semibold mb-2 block"
               data-testid="footer-logo"
             >
-              Sanjay Sethi <span className="text-primary">Advisory</span>
+              Dr. Sanjay Sethi <span className="text-primary">Advisory</span>
             </button>
             <p className="text-background/60 text-sm">
               Senior Hospitality Advisory | Mumbai, India
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
-            {["About", "Services", "Experience", "Contact"].map((item) => (
+            {["About", "Services", "Experience", "GBP", "Contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(`#${item.toLowerCase()}`)}
@@ -57,7 +57,7 @@ export default function Footer() {
             purely recommendatory in nature and are not binding on the recipient.
           </p>
           <p className="text-xs text-background/40 text-center mt-4">
-            &copy; {currentYear} Sanjay Sethi Advisory. All rights reserved.
+            &copy; {currentYear} Dr. Sanjay Sethi Advisory. All rights reserved.
           </p>
         </div>
       </div>
