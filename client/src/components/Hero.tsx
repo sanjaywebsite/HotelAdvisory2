@@ -43,13 +43,13 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.1),rgba(0,0,0,0.45)_70%,rgba(0,0,0,0.72))]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center pt-24">
-        <p className="text-primary font-medium text-xs md:text-sm tracking-[0.35em] uppercase mb-6">
+        <p className="text-blue-700 font-medium text-xs md:text-sm tracking-[0.35em] uppercase mb-6">
           Independent Hospitality & Board Advisory
         </p>
 
         <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl font-semibold text-white leading-tight mb-6">
           Dr. Sanjay Sethi
-          <span className="block text-primary mt-2">Advisory</span>
+          <span className="block text-gold-500 mt-2">Advisory</span>
         </h1>
 
         <p className="text-lg md:text-xl lg:text-2xl text-white/90 font-light max-w-4xl mx-auto mb-6 leading-relaxed">
@@ -60,7 +60,7 @@ export default function Hero() {
           {credentials.map((item) => (
             <span
               key={item}
-              className="px-4 py-2 rounded-md border border-white/15 bg-white/8 backdrop-blur-sm text-sm text-white/85"
+              className="px-4 py-2 rounded-md border border-blue-100 bg-white text-sm text-black"
             >
               {item}
             </span>
@@ -71,9 +71,9 @@ export default function Hero() {
           {focusPoints.map((item) => (
             <span
               key={item.label}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white/8 border border-white/10 backdrop-blur-sm text-sm text-white/85"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-white border border-blue-100 text-sm text-black"
             >
-              <item.icon className="h-4 w-4 text-primary" />
+              <item.icon className="h-4 w-4 text-blue-700" />
               {item.label}
             </span>
           ))}
@@ -92,7 +92,7 @@ export default function Hero() {
             variant="outline"
             size="lg"
             onClick={scrollToAbout}
-            className="min-w-[220px] border-white/30 text-white bg-white/10 backdrop-blur-sm"
+            className="min-w-[220px] border-blue-200 text-black bg-white"
             data-testid="button-hero-learn-more"
           >
             View Executive Profile

@@ -30,7 +30,7 @@ export default function GBP() {
     <section id="gbp" className="py-20 lg:py-32 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <Badge variant="secondary" className="mb-5 px-3 py-1.5">
+          <Badge variant="secondary" className="mb-5 px-3 py-1.5 bg-white text-black border border-blue-100">
             The Give Back Project (GBP)
           </Badge>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
@@ -46,18 +46,18 @@ export default function GBP() {
           {pillars.map((pillar) => (
             <Card
               key={pillar.title}
-              className="p-8 lg:p-10 hover-elevate transition-all duration-300"
+              className="p-8 lg:p-10 hover-elevate transition-all duration-300 bg-white text-black border-blue-100"
               data-testid={`card-gbp-${pillar.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="flex items-start gap-4">
-                <div className="p-3 rounded-md bg-primary/10">
-                  <pillar.icon className="h-6 w-6 text-primary" />
+                <div className="p-3 rounded-md bg-blue-50">
+                  <pillar.icon className="h-6 w-6 text-blue-700" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl lg:text-2xl font-medium text-foreground mb-2">
+                  <h3 className="font-serif text-xl lg:text-2xl font-medium text-black mb-2">
                     {pillar.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-black leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>
