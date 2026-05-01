@@ -6,8 +6,8 @@ const navItems = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
   { label: "GBP", href: "/gbp" },
+  { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
