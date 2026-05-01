@@ -28,7 +28,7 @@ const timeline = [
     role: "Senior Advisor",
     company: "Global PE, Funds & Developers",
     description:
-      "Providing strategic counsel to private equity firms, institutional investors, developers, and boards on India hospitality investments and operations.",
+      "Providing strategic counsel to private equity firms, institutional investors, developers, and boards on India hospitality investments and operations. Independent and Non-Executive Director.",
     highlight: "Strategic Advisory",
   },
 ];
