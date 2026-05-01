@@ -39,7 +39,7 @@ export default function Footer() {
               </button>
             ))}
             <button
-              onClick={() => scrollToSection("/gbp")}
+              onClick={() => (window.location.href = "/")}
               className="text-sm text-background/70 hover:text-background transition-colors"
               data-testid="footer-link-gbp"
             >
