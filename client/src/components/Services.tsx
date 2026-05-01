@@ -5,7 +5,7 @@ const services = [
   {
     icon: TrendingUp,
     title: "Investment Advisory",
-    description: "For capital decisions that require operator judgment.",
+    description: "For capital decisions that require the experience of operator and owner judgment.",
     points: [
       "Sector outlook and demand mapping",
       "Underwriting support and deal framing",
