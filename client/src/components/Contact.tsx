@@ -60,7 +60,7 @@ export default function Contact() {
 
             <div className="space-y-6">
               <a
-                href="mailto:contact@sanjaysethi.com"
+                href="mailto:contact@sanjaysethi.co"
                 className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group"
                 data-testid="link-email"
               >
@@ -69,7 +69,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium">contact@sanjaysethi.com</p>
+                  <p className="font-medium">contact@sanjaysethi.co</p>
                 </div>
               </a>
 
