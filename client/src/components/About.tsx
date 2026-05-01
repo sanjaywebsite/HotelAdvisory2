@@ -50,6 +50,9 @@ export default function About() {
                 Hall of Fame - Hotelier India 2019.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-3">
+                Best Hospitality Professional India - Pacific Asia Hotel Writers Association.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mt-3">
                 Certified Independent Director - IICA.
               </p>
               <p className="text-muted-foreground leading-relaxed mt-3">
