@@ -49,6 +49,9 @@ export default function About() {
               <p className="text-muted-foreground leading-relaxed mt-3">
                 Certified Independent Director - IICA.
               </p>
+              <p className="text-muted-foreground leading-relaxed mt-3">
+                Certified in Corporate Governance - IICA.
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-2 mt-8">
