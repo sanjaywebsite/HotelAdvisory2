@@ -84,7 +84,7 @@ export default function Contact() {
               </div>
 
               <a
-                href="https://www.linkedin.com/in/sanjaysethi08?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                href="https://www.linkedin.com/in/sanjaysethi08"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group"
@@ -95,7 +95,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">LinkedIn</p>
-                  <p className="font-medium">View executive profile</p>
+                  <p className="font-medium">Open profile</p>
                 </div>
               </a>
             </div>
