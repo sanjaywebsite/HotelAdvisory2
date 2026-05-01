@@ -46,6 +46,9 @@ export default function About() {
               <p className="text-muted-foreground leading-relaxed">
                 Ph.D. Honoris Causa, 2024.
               </p>
+              <p className="text-muted-foreground leading-relaxed mt-3">
+                Certified Independent Director - IICA.
+              </p>
             </div>
 
             <div className="flex flex-wrap gap-2 mt-8">
