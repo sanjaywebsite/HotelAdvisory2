@@ -16,7 +16,7 @@ const timeline = [
     highlight: "Brand Creation",
   },
   {
-    period: "2015 - 2025",
+    period: "2015 - 2026",
     role: "Managing Director & CEO",
     company: "Chalet Hotels Limited",
     description:
