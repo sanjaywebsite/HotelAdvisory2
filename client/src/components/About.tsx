@@ -35,7 +35,16 @@ export default function About() {
                 My work has covered India and select global geographies, with direct exposure to diverse markets, guest segments, and capital contexts. I have also worked closely across adjacent sectors including airlines, retail, lifestyle, F&B, wellness, and real estate.
               </p>
               <p>
-                The advisory is selective by design: built for decisions that require experience, discretion, and an operator’s lens.
+                The advisory is selective by design: built for decisions that require experience, discretion, and a dual lens of owners and operators.
+              </p>
+            </div>
+
+            <div className="mt-6 p-6 lg:p-8 rounded-md bg-card border border-card-border">
+              <p className="text-sm font-medium uppercase tracking-widest text-primary mb-3">
+                Recognition
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                With full honour conferred upon Sanjay Sethi, the Degree of Doctor of Philosophy (Ph.D.) Honoris Causa in 2024.
               </p>
             </div>
 
