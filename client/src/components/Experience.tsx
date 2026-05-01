@@ -8,7 +8,7 @@ const timeline = [
     highlight: "Operational Mastery",
   },
   {
-    period: "2006 - 2015",
+    period: "2006 - 2024",
     role: "Founder, CEO & Managing Director",
     company: "Keys Hotels (Berggruen Hotels)",
     description:
