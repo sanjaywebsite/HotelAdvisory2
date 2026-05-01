@@ -1,11 +1,11 @@
 const timeline = [
   {
-    period: "2015 - 2025",
-    role: "Managing Director & CEO",
-    company: "Chalet Hotels Limited",
+    period: "1988 - 2006",
+    role: "Senior Leadership Roles",
+    company: "Taj Group of Hotels (IHCL)",
     description:
-      "Led the company through its successful IPO, drove asset strategy, and expanded the portfolio to 3,000+ keys across premium properties with Marriott, Hyatt, and Taj partnerships.",
-    highlight: "IPO Leadership",
+      "14 years of progressive leadership including General Manager and Area Director positions, building deep operational expertise across luxury hospitality.",
+    highlight: "Operational Mastery",
   },
   {
     period: "2006 - 2015",
@@ -16,12 +16,12 @@ const timeline = [
     highlight: "Brand Creation",
   },
   {
-    period: "1988 - 2006",
-    role: "Senior Leadership Roles",
-    company: "Taj Group of Hotels (IHCL)",
+    period: "2015 - 2025",
+    role: "Managing Director & CEO",
+    company: "Chalet Hotels Limited",
     description:
-      "14 years of progressive leadership including General Manager and Area Director positions, building deep operational expertise across luxury hospitality.",
-    highlight: "Operational Mastery",
+      "Led the company through its successful IPO, drove asset strategy, and expanded the portfolio to 3,000+ keys across premium properties with Marriott, Hyatt, and Taj partnerships.",
+    highlight: "IPO Leadership",
   },
   {
     period: "Present",
