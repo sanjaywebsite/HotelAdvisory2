@@ -12,6 +12,7 @@ const focusPoints = [
   { icon: Landmark, label: "Hospitality Investment" },
   { icon: Shield, label: "Board Advisory" },
   { icon: Users, label: "Owner Strategy" },
+  { icon: Shield, label: "Operator Strategy" },
 ];
 
 export default function Hero() {
