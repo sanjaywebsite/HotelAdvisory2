@@ -47,13 +47,13 @@ export default function Header() {
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <button
             onClick={() => scrollToSection("#hero")}
-            className="font-serif text-2xl lg:text-4xl font-bold tracking-tight"
+            className="font-serif text-2xl lg:text-4xl font-bold tracking-tight text-left leading-none"
             data-testid="link-logo"
           >
             <span className={isScrolled ? "text-foreground" : "text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"}>
               Dr. Sanjay Sethi
             </span>
-            <span className={`ml-2 font-normal ${isScrolled ? "text-primary" : "text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"}`}>
+            <span className={`block mt-1 text-base lg:text-lg font-medium ${isScrolled ? "text-primary" : "text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"}`}>
               Advisory
             </span>
           </button>

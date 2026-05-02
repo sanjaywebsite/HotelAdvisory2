@@ -4,7 +4,7 @@ import heroImage from "@assets/generated_images/luxury_hotel_lobby_interior.png"
 
 const credentials = [
   "Former CEO & MD, Chalet Hotels",
-  "Founder, Keys Hotels",
+  "Founder, Keys Hotels & Resorts",
   "14 years with Taj Group",
 ];
 
