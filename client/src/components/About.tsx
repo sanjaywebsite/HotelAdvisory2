@@ -82,7 +82,7 @@ export default function About() {
               {highlights.map((item) => (
                 <div
                   key={item.label}
-                className="bg-card border border-card-border rounded-md p-6 lg:p-8 text-center shadow-sm"
+                  className="bg-card border border-card-border rounded-md p-6 lg:p-8 text-center shadow-sm"
                   data-testid={`stat-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   <item.icon className="h-8 w-8 text-primary mx-auto mb-4" />

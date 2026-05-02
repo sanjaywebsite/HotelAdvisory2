@@ -50,10 +50,10 @@ export default function Header() {
             className="font-serif text-xl lg:text-2xl font-semibold tracking-tight"
             data-testid="link-logo"
           >
-            <span className={isScrolled ? "text-foreground" : "text-white"}>
+            <span className={isScrolled ? "text-foreground" : "text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"}>
               Dr. Sanjay Sethi
             </span>
-            <span className={`ml-2 font-normal ${isScrolled ? "text-primary" : "text-primary"}`}>
+            <span className={`ml-2 font-normal ${isScrolled ? "text-primary" : "text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"}`}>
               Advisory
             </span>
           </button>
@@ -63,7 +63,7 @@ export default function Header() {
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-colors hover-elevate px-2 py-1 rounded ${
+                className={`text-sm font-medium transition-colors px-2 py-1 rounded ${
                   isScrolled
                     ? "text-muted-foreground hover:text-foreground"
                     : "text-white/80 hover:text-white"
