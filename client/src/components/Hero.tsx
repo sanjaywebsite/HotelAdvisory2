@@ -53,8 +53,8 @@ export default function Hero() {
           <span className="block text-primary mt-2">Advisory</span>
         </h1>
 
-        <p className="text-lg md:text-xl lg:text-2xl text-white font-light max-w-4xl mx-auto mb-8 leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.55)]">
-          Advisory anchored in lived experience across the business of operating and investing in hotels.
+        <p className="text-lg md:text-xl lg:text-2xl text-white font-medium max-w-3xl mx-auto mb-8 leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.75)]">
+          Senior hospitality advisory with operator and owner perspective.
         </p>
 
         <div className="flex flex-wrap justify-center gap-3 mb-8">
