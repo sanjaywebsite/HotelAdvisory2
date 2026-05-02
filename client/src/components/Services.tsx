@@ -4,7 +4,7 @@ const services = [
   {
     number: "01",
     title: "Investment Advisory",
-    description: "For capital decisions requiring both operator and owner judgment. Sector analysis, underwriting support, and risk review across assumptions and capital structure.",
+    description: "For capital decisions requiring both operator and owner judgment. M&A advisory, sector analysis, underwriting support, and risk review across assumptions and capital structure.",
     tags: ["M&A Advisory", "Sector Mapping", "Underwriting Support", "Risk Review"],
   },
   {

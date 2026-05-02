@@ -61,7 +61,7 @@ export default function Experience() {
               {/* Period + highlight */}
               <div>
                 <p className="text-sm font-mono text-muted-foreground mb-2">{item.period}</p>
-                <span className="inline-block text-xs font-semibold tracking-wide text-primary bg-primary/8 px-2.5 py-1 rounded-sm border border-primary/15">
+                <span className="inline-block text-xs font-semibold tracking-wide text-primary bg-primary/10 px-2.5 py-1 rounded-sm border border-primary/15">
                   {item.highlight}
                 </span>
               </div>

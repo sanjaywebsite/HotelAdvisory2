@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, MapPin, Linkedin, Send, CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowUpRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export default function Contact() {
@@ -30,93 +30,101 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     await new Promise((resolve) => setTimeout(resolve, 1000));
-
     console.log("Form submitted:", formData);
     setIsSubmitting(false);
     setIsSubmitted(true);
     toast({
       title: "Message Sent",
-      description: "Thank you for your inquiry. I will respond within 48 hours.",
+      description: "Thank you for your enquiry. I will respond within 48 hours.",
     });
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-card">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+    <section id="contact" className="bg-background border-t border-border">
+
+      {/* Section header — matches other sections */}
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 pt-20 lg:pt-28 pb-12">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-border pb-10">
           <div>
-            <p className="text-primary font-medium text-sm tracking-widest uppercase mb-4">
+            <p className="text-xs font-semibold tracking-[0.35em] uppercase text-primary mb-4">
               Get In Touch
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
-              Let’s Discuss an Advisory Mandate
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-snug">
+              Let's Discuss an<br />Advisory Mandate
             </h2>
-            <p className="text-lg text-muted-foreground mb-10 max-w-xl">
-              For institutional investors, owners, developers, and boards seeking a discreet,
-              high-trust advisory conversation.
-            </p>
+          </div>
+          <p className="text-muted-foreground text-base max-w-xs lg:text-right">
+            For institutional investors, owners, developers, and boards seeking a discreet, high-trust conversation.
+          </p>
+        </div>
+      </div>
 
-            <div className="space-y-6">
-              <a
-                href="mailto:contact@sanjaysethi.co"
-                className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group"
-                data-testid="link-email"
-              >
-                <div className="p-3 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                  <Mail className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium">contact@sanjaysethi.co</p>
-                </div>
-              </a>
+      {/* Two-column layout */}
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 pb-20 lg:pb-28">
+        <div className="grid lg:grid-cols-[1fr_480px] gap-16 lg:gap-24 items-start">
 
-              <div className="flex items-center gap-4">
-                <div className="p-3 rounded-md bg-primary/10">
-                  <MapPin className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium text-foreground">Mumbai, India</p>
-                </div>
+          {/* Left — contact details, editorial style */}
+          <div className="space-y-0 divide-y divide-border">
+            <a
+              href="mailto:contact@sanjaysethi.co"
+              className="flex items-start justify-between py-6 group"
+              data-testid="link-email"
+            >
+              <div>
+                <p className="text-xs text-muted-foreground tracking-[0.3em] uppercase mb-1">Email</p>
+                <p className="text-foreground font-medium group-hover:text-primary transition-colors">
+                  contact@sanjaysethi.co
+                </p>
               </div>
+              <ArrowUpRight className="h-4 w-4 text-border group-hover:text-primary transition-colors mt-1 flex-shrink-0" />
+            </a>
 
-              <a
-                href="https://www.linkedin.com/in/sanjaysethi08"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 text-foreground hover:text-primary transition-colors group"
-                data-testid="link-linkedin"
-              >
-                <div className="p-3 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                  <Linkedin className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">LinkedIn</p>
-                  <p className="font-medium">Open profile</p>
-                </div>
-              </a>
+            <div className="py-6">
+              <p className="text-xs text-muted-foreground tracking-[0.3em] uppercase mb-1">Location</p>
+              <p className="text-foreground font-medium" data-testid="text-location">Mumbai, India</p>
+            </div>
+
+            <a
+              href="https://www.linkedin.com/in/sanjaysethi08"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start justify-between py-6 group"
+              data-testid="link-linkedin"
+            >
+              <div>
+                <p className="text-xs text-muted-foreground tracking-[0.3em] uppercase mb-1">LinkedIn</p>
+                <p className="text-foreground font-medium group-hover:text-primary transition-colors">
+                  sanjaysethi08
+                </p>
+              </div>
+              <ArrowUpRight className="h-4 w-4 text-border group-hover:text-primary transition-colors mt-1 flex-shrink-0" />
+            </a>
+
+            <div className="pt-8">
+              <p className="text-xs text-muted-foreground leading-relaxed max-w-sm">
+                Engagements are limited by design. All conversations are held in the strictest confidence.
+              </p>
             </div>
           </div>
 
-          <div className="bg-background rounded-md p-8 lg:p-10 border border-border shadow-sm">
+          {/* Right — form, no card wrapper */}
+          <div>
             {isSubmitted ? (
-              <div className="flex flex-col items-center justify-center h-full py-12 text-center">
-                <CheckCircle className="h-16 w-16 text-primary mb-6" />
+              <div className="flex flex-col items-center justify-center py-20 text-center border border-border">
+                <CheckCircle className="h-10 w-10 text-primary mb-6" />
                 <h3 className="font-serif text-2xl font-semibold text-foreground mb-3">
                   Thank You
                 </h3>
-                <p className="text-muted-foreground max-w-sm">
+                <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
                   Your message has been received. I will respond within 48 hours.
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Name</Label>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="name" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Name</Label>
                     <Input
                       id="name"
                       name="name"
@@ -127,8 +135,8 @@ export default function Contact() {
                       data-testid="input-name"
                     />
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="email">Email</Label>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="email" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Email</Label>
                     <Input
                       id="email"
                       name="email"
@@ -142,39 +150,42 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="designation">Designation (Consultant, Owner / CEO, Senior Management)</Label>
-                  <Select value={formData.designation} onValueChange={handleDesignationChange}>
-                    <SelectTrigger id="designation" data-testid="select-designation">
-                      <SelectValue placeholder="Select designation" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="consultant">Consultant</SelectItem>
-                      <SelectItem value="owner-ceo">Owner / CEO</SelectItem>
-                      <SelectItem value="senior-management">Senior Management</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="company">Company / Organization</Label>
+                <div className="space-y-1.5">
+                  <Label htmlFor="company" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Company / Organisation</Label>
                   <Input
                     id="company"
                     name="company"
-                    placeholder="Your organization"
+                    placeholder="Your organisation"
                     value={formData.company}
                     onChange={handleChange}
                     data-testid="input-company"
                   />
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
+                <div className="space-y-1.5">
+                  <Label htmlFor="designation" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Designation</Label>
+                  <Select value={formData.designation} onValueChange={handleDesignationChange}>
+                    <SelectTrigger id="designation" data-testid="select-designation">
+                      <SelectValue placeholder="Select your designation" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="investor-pe">Investor / PE Fund</SelectItem>
+                      <SelectItem value="owner-developer">Owner / Developer</SelectItem>
+                      <SelectItem value="owner-ceo">Owner / CEO</SelectItem>
+                      <SelectItem value="board-director">Board Director</SelectItem>
+                      <SelectItem value="senior-management">Senior Management</SelectItem>
+                      <SelectItem value="consultant">Consultant</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-1.5">
+                  <Label htmlFor="message" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Message</Label>
                   <Textarea
                     id="message"
                     name="message"
-                    placeholder="Tell me about the advisory mandate you would like to discuss..."
-                    rows={6}
+                    placeholder="Briefly describe the mandate or question you would like to discuss..."
+                    rows={5}
                     value={formData.message}
                     onChange={handleChange}
                     required
@@ -185,18 +196,12 @@ export default function Contact() {
 
                 <Button
                   type="submit"
-                  className="w-full"
+                  variant="outline"
+                  className="w-full tracking-widest uppercase text-xs"
                   disabled={isSubmitting}
                   data-testid="button-submit"
                 >
-                  {isSubmitting ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      Send Message
-                      <Send className="ml-2 h-4 w-4" />
-                    </>
-                  )}
+                  {isSubmitting ? "Sending..." : "Submit Enquiry"}
                 </Button>
               </form>
             )}
