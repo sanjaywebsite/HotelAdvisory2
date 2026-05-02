@@ -43,11 +43,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),rgba(0,0,0,0)_35%),radial-gradient(circle_at_center,rgba(255,193,7,0.10),rgba(0,0,0,0)_50%)]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center pt-20 lg:pt-24">
-        <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/35 px-4 py-2 text-[10px] md:text-[11px] uppercase tracking-[0.42em] text-white/95 backdrop-blur-md mb-6 shadow-[0_6px_30px_rgba(0,0,0,0.22)]">
-          <Sparkles className="h-3.5 w-3.5 text-primary" />
-          Independent Hospitality & Board Advisory
-        </div>
-
         <h1 className="font-serif text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-none mb-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]">
           Dr. Sanjay Sethi
           <span className="block text-primary mt-2">Advisory</span>
