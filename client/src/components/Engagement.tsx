@@ -1,28 +1,5 @@
-import { Calendar, FileText, Lock, Award, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const features = [
-  {
-    icon: Calendar,
-    label: "4–5 Days/Month",
-    description: "Focused time allocation for high-impact advisory",
-  },
-  {
-    icon: FileText,
-    label: "Retainer + Deliverables",
-    description: "Structured around outcomes, not hours",
-  },
-  {
-    icon: Lock,
-    label: "Confidential",
-    description: "Absolute discretion on all matters",
-  },
-  {
-    icon: Award,
-    label: "Experience-Led",
-    description: "Judgment drawn from 37 years in the field",
-  },
-];
 
 export default function Engagement() {
   const scrollToContact = () => {
@@ -30,43 +7,43 @@ export default function Engagement() {
   };
 
   return (
-    <section className="py-20 lg:py-24 bg-foreground text-background">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section className="bg-background border-t border-border">
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 py-20 lg:py-28">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
           <div>
-            <p className="text-primary font-semibold text-xs tracking-[0.32em] uppercase mb-4">
+            <p className="text-xs font-semibold tracking-[0.35em] uppercase text-primary mb-5">
               Engagement Model
             </p>
-            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-background mb-6">
-              Selective Senior Advisory
+            <h2 className="font-serif text-3xl md:text-4xl font-semibold text-foreground mb-6 leading-snug">
+              Selective. Confidential.<br />Experience-Led.
             </h2>
-            <p className="text-base text-background/70 mb-8 leading-relaxed">
-              A focused, high-trust model aligned with strategic outcomes for hospitality, related sectors, and board-level decision making. Advisory engagements are limited to ensure full attention and depth.
+            <p className="text-muted-foreground text-base leading-relaxed mb-4">
+              Advisory engagements are limited by design — typically 4 to 5 focused days per month — structured around outcomes, not hours. This is not a consulting firm. It is access to one person's three decades of direct experience.
             </p>
-            <p className="text-sm text-background/50 mb-8">
-              Available for select mandates with global investors, owners, developers, and funds.
+            <p className="text-muted-foreground text-base leading-relaxed mb-10">
+              Engagements are available on retainer with clear deliverables. All conversations and mandates are held in the strictest confidence.
             </p>
-            <Button
-              variant="outline"
-              onClick={scrollToContact}
-              className="border-background/30 text-background bg-background/10 backdrop-blur-sm"
-              data-testid="button-engagement-cta"
-            >
+            <Button onClick={scrollToContact} className="gap-2" data-testid="button-engagement-cta">
               Enquire About Availability
-              <ArrowRight className="ml-2 h-4 w-4" />
+              <ArrowRight className="h-4 w-4" />
             </Button>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-4">
-            {features.map((feature) => (
+          <div className="grid grid-cols-2 gap-px bg-border border border-border">
+            {[
+              { label: "Commitment", value: "4–5 Days/Month" },
+              { label: "Structure", value: "Retainer + Deliverables" },
+              { label: "Confidentiality", value: "Absolute" },
+              { label: "Availability", value: "Select Mandates" },
+            ].map((item) => (
               <div
-                key={feature.label}
-                className="p-5 rounded-md bg-background/5 border border-background/10"
-                data-testid={`engagement-${feature.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
+                key={item.label}
+                className="bg-background p-6 lg:p-8"
+                data-testid={`engagement-${item.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
               >
-                <feature.icon className="h-5 w-5 text-primary mb-3" />
-                <p className="font-semibold text-background text-sm mb-1">{feature.label}</p>
-                <p className="text-xs text-background/55 leading-relaxed">{feature.description}</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-2">{item.label}</p>
+                <p className="font-serif text-lg font-semibold text-foreground">{item.value}</p>
               </div>
             ))}
           </div>

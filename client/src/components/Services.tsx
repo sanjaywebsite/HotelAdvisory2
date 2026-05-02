@@ -1,96 +1,91 @@
-import { Card } from "@/components/ui/card";
-import { TrendingUp, Settings, Compass, Users, CheckCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const services = [
   {
-    icon: TrendingUp,
+    number: "01",
     title: "Investment Advisory",
-    description: "For capital decisions requiring both operator and owner judgment.",
-    points: [
-      "Sector outlook and demand mapping",
-      "Underwriting support and deal framing",
-      "Operator selection and negotiation strategy",
-      "Risk review across assumptions and capital structure",
-    ],
+    description: "For capital decisions requiring both operator and owner judgment. Deal framing, underwriting support, operator selection, and risk review across assumptions and capital structure.",
+    tags: ["Deal Framing", "Underwriting", "Operator Selection", "Risk Review"],
   },
   {
-    icon: Settings,
+    number: "02",
     title: "Operational Excellence",
-    description: "For owners seeking stronger asset performance and repositioning.",
-    points: [
-      "Performance uplift and KPI review",
-      "Brand architecture and asset strategy",
-      "Efficiency, service, and operating model review",
-      "Asset repositioning for premium outcomes",
-    ],
+    description: "For owners seeking stronger asset performance. KPI review, brand architecture, operating model optimization, and asset repositioning for premium market outcomes.",
+    tags: ["KPI Review", "Brand Architecture", "Operating Model", "Repositioning"],
   },
   {
-    icon: Compass,
+    number: "03",
     title: "Strategic Foresight",
-    description: "For long-range decisions in a rapidly shifting hospitality market.",
-    points: [
-      "India hospitality landscape mapping",
-      "ESG and future-demand signals",
-      "Competitive and micro-market analysis",
-      "Scenario planning for growth and resilience",
-    ],
+    description: "For long-range decisions in a rapidly shifting market. India hospitality landscape mapping, ESG signals, micro-market analysis, and scenario planning for resilience.",
+    tags: ["Market Mapping", "ESG Signals", "Scenario Planning", "Competitive Analysis"],
   },
   {
-    icon: Users,
+    number: "04",
     title: "Owner & Board Advisory",
-    description: "For boards and family offices that need clarity, not noise.",
-    points: [
-      "Board-level strategic counsel",
-      "Investor, developer, and partner alignment",
-      "Capital allocation and governance perspective",
-      "Confidential second opinion on key decisions",
-    ],
+    description: "For boards and family offices that need clarity, not noise. Board-level counsel, capital allocation perspective, governance guidance, and confidential second opinion.",
+    tags: ["Board Counsel", "Governance", "Capital Allocation", "Second Opinion"],
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 lg:py-32 bg-card">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-primary font-semibold text-xs tracking-[0.32em] uppercase mb-4">
-            What I Offer
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-5">
-            Senior Advisory Across the Hotel Value Chain
-          </h2>
-          <p className="text-base lg:text-lg text-muted-foreground">
+    <section id="services" className="bg-background">
+      {/* Section header */}
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 pt-20 lg:pt-28 pb-12">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-border pb-10">
+          <div>
+            <p className="text-xs font-semibold tracking-[0.35em] uppercase text-primary mb-4">
+              What I Offer
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-snug max-w-xl">
+              Senior Advisory Across the Hotel Value Chain
+            </h2>
+          </div>
+          <p className="text-muted-foreground text-base max-w-xs lg:text-right">
             A concise, high-trust offering for institutions, owners, developers, and boards.
           </p>
         </div>
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+      {/* Services list — editorial rows */}
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 pb-20 lg:pb-28">
+        <div className="divide-y divide-border">
           {services.map((service) => (
-            <Card
+            <div
               key={service.title}
-              className="p-8 lg:p-10 hover-elevate"
+              className="group py-8 lg:py-10 grid lg:grid-cols-[80px_1fr_1fr] gap-6 lg:gap-12 hover-elevate"
               data-testid={`card-service-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="p-3 rounded-md bg-primary/10 flex-shrink-0">
-                  <service.icon className="h-6 w-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-serif text-xl font-semibold text-foreground mb-1">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
-                </div>
+              {/* Number */}
+              <span className="font-serif text-4xl font-bold text-border group-hover:text-primary/30 transition-colors leading-none pt-1">
+                {service.number}
+              </span>
+
+              {/* Title + desc */}
+              <div>
+                <h3 className="font-serif text-xl lg:text-2xl font-semibold text-foreground mb-3">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <ul className="space-y-2.5">
-                {service.points.map((point) => (
-                  <li key={point} className="flex items-start gap-3 text-sm text-muted-foreground">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                    {point}
-                  </li>
-                ))}
-              </ul>
-            </Card>
+
+              {/* Tags + arrow */}
+              <div className="flex flex-col justify-between">
+                <div className="flex flex-wrap gap-2">
+                  {service.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs text-muted-foreground border border-border px-2.5 py-1 rounded-sm"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <ArrowUpRight className="h-5 w-5 text-border group-hover:text-primary transition-colors mt-4 hidden lg:block" />
+              </div>
+            </div>
           ))}
         </div>
       </div>

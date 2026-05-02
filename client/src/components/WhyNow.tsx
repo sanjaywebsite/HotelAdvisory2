@@ -1,74 +1,61 @@
-import { TrendingUp, Building, Globe, BarChart3, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
 const drivers = [
   {
-    icon: TrendingUp,
+    label: "01",
     title: "Premiumisation Wave",
-    description: "Rising demand for luxury and upper-upscale properties across key Indian markets is creating significant capital and advisory opportunity.",
+    description: "Rising demand for luxury and upper-upscale properties across key Indian markets is creating significant capital opportunity and compressing viable supply.",
   },
   {
-    icon: Building,
+    label: "02",
     title: "Supply Constraints",
-    description: "Limited quality inventory creates sustained pricing power and strong risk-adjusted returns for well-positioned assets.",
+    description: "Limited quality inventory sustains pricing power and delivers strong risk-adjusted returns for well-positioned, well-operated assets.",
   },
   {
-    icon: Globe,
+    label: "03",
     title: "Global Investor Interest",
-    description: "Increasing capital flows from international PE funds, family offices, and institutional investors into India hospitality.",
+    description: "Capital flows from international PE funds, family offices, and institutional investors into India hospitality are accelerating — and so is the need for grounded local counsel.",
   },
   {
-    icon: BarChart3,
+    label: "04",
     title: "Structural Demand Growth",
-    description: "Domestic consumption, infrastructure expansion, and travel propelling a multi-year growth trajectory unlike any previous cycle.",
+    description: "Domestic consumption, infrastructure expansion, and MICE travel are propelling a multi-year growth trajectory unlike any previous cycle.",
   },
 ];
 
 export default function WhyNow() {
-  const scrollToContact = () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section className="py-20 lg:py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          <div>
-            <p className="text-primary font-semibold text-xs tracking-[0.32em] uppercase mb-4">
-              Why It Matters
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 leading-snug">
-              India's Hospitality Opportunity
-            </h2>
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed mb-8">
-              India's hospitality sector is entering a multi-year expansion cycle. Operators, owners, and investors increasingly need experienced, grounded, decision-grade guidance — not generalist consulting.
-            </p>
-            <p className="text-base lg:text-lg text-muted-foreground leading-relaxed mb-10">
-              This is the moment for advisory that has lived through every cycle of Indian hospitality, and can distinguish signal from noise.
-            </p>
-            <Button onClick={scrollToContact} data-testid="button-whynow-cta">
-              Start a Conversation
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </div>
+    <section className="bg-foreground text-background">
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 py-20 lg:py-28">
 
-          <div className="grid sm:grid-cols-2 gap-5">
-            {drivers.map((driver) => (
-              <div
-                key={driver.title}
-                className="p-6 rounded-md bg-card border border-card-border"
-                data-testid={`driver-${driver.title.toLowerCase().replace(/\s+/g, '-')}`}
-              >
-                <div className="p-2.5 rounded-md bg-primary/10 w-fit mb-4">
-                  <driver.icon className="h-5 w-5 text-primary" />
-                </div>
-                <h3 className="font-semibold text-foreground mb-2 text-sm">{driver.title}</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  {driver.description}
-                </p>
-              </div>
-            ))}
+        {/* Header */}
+        <div className="border-b border-background/10 pb-10 mb-0">
+          <p className="text-xs font-semibold tracking-[0.35em] uppercase text-primary mb-4">
+            Why Now
+          </p>
+          <div className="grid lg:grid-cols-2 gap-8 items-end">
+            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-background leading-snug">
+              India's Hospitality Moment
+            </h2>
+            <p className="text-background/55 text-base leading-relaxed lg:pb-1">
+              India's hospitality sector is entering a multi-year expansion cycle. Operators, owners, and investors need experienced, grounded guidance — not generalist consulting.
+            </p>
           </div>
+        </div>
+
+        {/* Driver rows */}
+        <div className="divide-y divide-background/10">
+          {drivers.map((driver) => (
+            <div
+              key={driver.title}
+              className="py-7 grid lg:grid-cols-[60px_240px_1fr] gap-4 lg:gap-10 items-start"
+              data-testid={`driver-${driver.title.toLowerCase().replace(/\s+/g, '-')}`}
+            >
+              <span className="font-serif text-2xl font-bold text-background/20 leading-none pt-0.5">
+                {driver.label}
+              </span>
+              <h3 className="font-semibold text-background text-base">{driver.title}</h3>
+              <p className="text-background/55 text-sm leading-relaxed">{driver.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

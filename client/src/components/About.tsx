@@ -1,111 +1,116 @@
-import { Badge } from "@/components/ui/badge";
-import { Building2, Award, TrendingUp, Users, Compass, GraduationCap } from "lucide-react";
-
-const credentials = [
-  { label: "CHA Certified", icon: Award },
-  { label: "IHM Pusa", icon: GraduationCap },
-  { label: "IIM Bangalore", icon: GraduationCap },
-  { label: "Cornell University", icon: GraduationCap },
-];
-
-const highlights = [
-  { icon: Building2, value: "37+", label: "Years in Hospitality" },
-  { icon: TrendingUp, value: "3,000+", label: "Hotel Keys Led" },
-  { icon: Users, value: "Board", label: "Level Advisory" },
-  { icon: Compass, value: "Global", label: "Investor Reach" },
-];
+import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const recognitions = [
   "Ph.D. Honoris Causa, 2024",
   "Hall of Fame — Hotelier India, 2019",
   "Hall of Fame — Hospitality Horizon India",
-  "Best Hospitality Professional India — Pacific Asia Hotel Writers Association",
-  "Certified Independent Director — IICA",
-  "Certified in Corporate Governance — IICA",
+  "Best Hospitality Professional — Pacific Asia Hotel Writers Association",
+  "Certified Independent Director & Corporate Governance — IICA",
+];
+
+const education = [
+  "IHM Pusa, New Delhi",
+  "IIM Bangalore",
+  "Cornell University",
+  "CHA Certified",
 ];
 
 export default function About() {
+  const scrollToContact = () => {
+    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section id="about" className="py-20 lg:py-32 bg-background">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+    <section id="about" className="bg-background">
+      {/* Pull quote opening — full width, high contrast */}
+      <div className="border-b border-border">
+        <div className="max-w-7xl mx-auto px-8 lg:px-16 py-20 lg:py-28">
+          <p className="text-xs font-semibold tracking-[0.35em] uppercase text-primary mb-8">
+            Who I Am
+          </p>
+          <blockquote className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-foreground leading-relaxed max-w-5xl">
+            "A career built not in conference rooms, but on the ground — across luxury properties, 
+            mid-market brands, boardrooms, and capital transactions. The kind of depth that only 
+            comes from having lived every side of the table."
+          </blockquote>
+        </div>
+      </div>
+
+      {/* Two-column body */}
+      <div className="max-w-7xl mx-auto px-8 lg:px-16 py-20 lg:py-28">
+        <div className="grid lg:grid-cols-[1fr_380px] gap-16 lg:gap-24">
+
+          {/* Left — main bio */}
           <div>
-            <p className="text-primary font-semibold text-xs tracking-[0.32em] uppercase mb-4">
-              Who I Am
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-8 leading-snug">
-              A Career Built on Operating Depth and Strategic Judgment
-            </h2>
-            <div className="space-y-5 text-muted-foreground text-base lg:text-lg leading-relaxed">
+            <div className="space-y-6 text-muted-foreground text-base lg:text-lg leading-relaxed mb-12">
               <p>
-                37 years across hotels and resorts — spanning luxury, upper-upscale, mid-market, and select business-led properties — with lived experience across the full cycle of ownership, development, operations, growth, and governance.
+                37 years across the full arc of Indian hospitality — luxury and upper-upscale, mid-market and select-service, development and operations, fundraising and governance. Not as an observer, but as the person responsible for outcomes.
               </p>
               <p>
-                My work has covered India and select global geographies, with direct exposure to diverse markets, guest segments, and capital contexts. I have also worked closely across adjacent sectors including airlines, retail, luxury lifestyle, F&B, wellness, and real estate.
+                Built Keys Hotels & Resorts from concept to an established brand. Led Chalet Hotels through a successful IPO, expanded to 3,000+ keys in partnership with Marriott, Hyatt, Accor, and Taj. Spent 14 formative years with the Taj Group, learning the discipline of luxury operations at scale.
               </p>
               <p>
-                The advisory is selective by design: built for decisions that require experience, discretion, and a dual lens of owners and operators.
+                Today, the advisory is deliberately selective — available to investors, owners, developers, and boards who need a voice that has been on both sides of every decision they are facing.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-2 mt-8 mb-8">
-              {credentials.map((cred) => (
-                <Badge key={cred.label} variant="secondary" className="px-3 py-1.5 text-sm gap-1.5">
-                  <cred.icon className="h-3.5 w-3.5" />
-                  {cred.label}
-                </Badge>
-              ))}
-            </div>
+            <Button onClick={scrollToContact} variant="outline" className="gap-2" data-testid="button-about-cta">
+              Start a Conversation
+              <ArrowRight className="h-4 w-4" />
+            </Button>
+          </div>
 
-            <div className="p-6 lg:p-8 rounded-md bg-card border border-card-border">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary mb-4">
+          {/* Right — recognition + education */}
+          <div className="space-y-12">
+            <div>
+              <p className="text-xs font-semibold tracking-[0.35em] uppercase text-primary mb-5">
                 Recognition
               </p>
-              <ul className="space-y-2">
+              <ul className="space-y-3">
                 {recognitions.map((r) => (
-                  <li key={r} className="flex items-start gap-2 text-sm text-muted-foreground">
-                    <span className="mt-2 h-1 w-1 rounded-full bg-primary flex-shrink-0" />
+                  <li key={r} className="text-sm text-muted-foreground leading-snug border-b border-border pb-3 last:border-0">
                     {r}
                   </li>
                 ))}
               </ul>
             </div>
+
+            <div>
+              <p className="text-xs font-semibold tracking-[0.35em] uppercase text-primary mb-5">
+                Education
+              </p>
+              <ul className="space-y-3">
+                {education.map((e) => (
+                  <li key={e} className="text-sm text-muted-foreground border-b border-border pb-3 last:border-0">
+                    {e}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
+        </div>
+      </div>
 
-          <div className="space-y-6">
-            <div className="grid grid-cols-2 gap-4">
-              {highlights.map((item) => (
-                <div
-                  key={item.label}
-                  className="bg-card border border-card-border rounded-md p-6 text-center"
-                  data-testid={`stat-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
-                >
-                  <item.icon className="h-7 w-7 text-primary mx-auto mb-3" />
-                  <p className="font-serif text-2xl lg:text-3xl font-bold text-foreground mb-1">
-                    {item.value}
-                  </p>
-                  <p className="text-xs text-muted-foreground uppercase tracking-wide">{item.label}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="p-6 lg:p-8 rounded-md bg-card border border-card-border">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary mb-4">
-                Executive Positioning
-              </p>
-              <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
-                Independent senior advisory for hospitality and adjacent industries — serving investors, owners, and boards seeking a calm, experienced voice on growth, governance, talent, stakeholder relationships, and long-term value creation.
-              </p>
-            </div>
-
-            <div className="p-6 lg:p-8 rounded-md bg-primary/5 border border-primary/15">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary mb-4">
-                Current Focus
-              </p>
-              <p className="text-muted-foreground leading-relaxed text-sm lg:text-base">
-                Available for select advisory mandates with global PE firms, institutional investors, developers, family offices, and boards seeking independent hospitality counsel.
-              </p>
-            </div>
+      {/* Stat band — full width, slight contrast */}
+      <div className="border-t border-b border-border bg-card">
+        <div className="max-w-7xl mx-auto px-8 lg:px-16 py-10">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              { value: "37+", label: "Years in Hospitality" },
+              { value: "3,000+", label: "Hotel Keys Led" },
+              { value: "3", label: "Major Brands Shaped" },
+              { value: "2024", label: "Ph.D. Honoris Causa" },
+            ].map((stat) => (
+              <div key={stat.label} data-testid={`stat-${stat.label.toLowerCase().replace(/\s+/g, '-')}`}>
+                <p className="font-serif text-3xl lg:text-4xl font-bold text-foreground mb-1">
+                  {stat.value}
+                </p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wide">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

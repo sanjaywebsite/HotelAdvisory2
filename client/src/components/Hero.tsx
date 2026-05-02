@@ -1,19 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Landmark, Shield, Users, Building2 } from "lucide-react";
+import { ArrowRight, ArrowDown } from "lucide-react";
 import heroImage from "@assets/generated_images/luxury_hotel_lobby_interior.png";
-
-const credentials = [
-  "Former CEO & MD, Chalet Hotels",
-  "Founder, Keys Hotels & Resorts",
-  "14 years with Taj Group (IHCL)",
-];
-
-const focusPoints = [
-  { icon: Landmark, label: "Hospitality Investment" },
-  { icon: Shield, label: "Board Advisory" },
-  { icon: Users, label: "Owner Strategy" },
-  { icon: Building2, label: "Operator Strategy" },
-];
 
 export default function Hero() {
   const scrollToContact = () => {
@@ -26,82 +13,99 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col overflow-hidden"
     >
+      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/65 to-black/85" />
 
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-8 text-center pt-28 lg:pt-32 pb-20">
-        <p className="text-primary font-semibold text-xs md:text-sm tracking-[0.38em] uppercase mb-6 drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)]">
-          Independent Hospitality &amp; Board Advisory
-        </p>
+      {/* Gradient: strong on left, fades to translucent on right */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/92 via-black/75 to-black/30" />
+      {/* Bottom fade for seamless transition */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/60 to-transparent" />
 
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-none mb-4 drop-shadow-[0_2px_16px_rgba(0,0,0,0.8)]">
-          Dr. Sanjay Sethi
-        </h1>
-        <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-light text-primary mb-8 tracking-wide drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-          Advisory
-        </p>
+      {/* Main content — left-aligned, vertically centered */}
+      <div className="relative z-10 flex-1 flex items-center">
+        <div className="w-full max-w-7xl mx-auto px-8 lg:px-16 pt-24 pb-16">
+          <div className="max-w-2xl">
 
-        <p className="text-base md:text-lg lg:text-xl text-white/90 font-light max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.9)]">
-          37 years of lived experience across hospitality ownership, operations, and governance — brought to bear on decisions that matter.
-        </p>
+            {/* Overline */}
+            <p className="text-primary text-xs font-semibold tracking-[0.35em] uppercase mb-10">
+              Independent Advisory
+            </p>
 
-        <div className="flex flex-wrap justify-center gap-2 mb-6">
-          {credentials.map((item) => (
-            <span
-              key={item}
-              className="px-4 py-2 rounded-md border border-white/25 bg-black/45 text-sm text-white backdrop-blur-sm"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
+            {/* Name */}
+            <h1 className="font-serif font-bold text-white leading-[0.92] mb-0">
+              <span className="block text-5xl md:text-7xl lg:text-[5.5rem]">Dr. Sanjay</span>
+              <span className="block text-5xl md:text-7xl lg:text-[5.5rem]">Sethi</span>
+            </h1>
 
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
-          {focusPoints.map((item) => (
-            <span
-              key={item.label}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-white/15 bg-black/30 text-sm text-white/90 backdrop-blur-sm"
-            >
-              <item.icon className="h-4 w-4 text-primary flex-shrink-0" />
-              {item.label}
-            </span>
-          ))}
-        </div>
+            {/* Gold rule */}
+            <div className="h-px w-16 bg-primary mt-8 mb-8" />
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button
-            size="lg"
-            onClick={scrollToContact}
-            className="min-w-[220px]"
-            data-testid="button-hero-consultation"
-          >
-            Request Advisory Conversation
-          </Button>
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={scrollToAbout}
-            className="min-w-[220px] border-white/30 text-white bg-black/25 backdrop-blur-sm"
-            data-testid="button-hero-learn-more"
-          >
-            View Executive Profile
-          </Button>
+            {/* Tagline */}
+            <p className="text-white/80 text-lg lg:text-xl font-light leading-relaxed max-w-xl mb-10">
+              37 years building, operating, and governing India's finest hospitality assets — now available as a senior advisory voice for capital decisions that matter.
+            </p>
+
+            {/* Credentials — plain text, no chips */}
+            <div className="flex flex-wrap gap-x-6 gap-y-1 mb-12">
+              {[
+                "Former CEO & MD, Chalet Hotels",
+                "Founder, Keys Hotels & Resorts",
+                "14 years at Taj Group (IHCL)",
+              ].map((c, i) => (
+                <span key={c} className="flex items-center gap-2 text-sm text-white/55">
+                  {i !== 0 && <span className="hidden sm:inline h-3 w-px bg-white/25" />}
+                  {c}
+                </span>
+              ))}
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap gap-4">
+              <Button
+                size="lg"
+                onClick={scrollToContact}
+                className="gap-2"
+                data-testid="button-hero-consultation"
+              >
+                Request a Conversation
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+              <button
+                onClick={scrollToAbout}
+                className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors px-2"
+                data-testid="button-hero-learn-more"
+              >
+                View Profile
+                <ArrowDown className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      <button
-        onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/50 hover:text-white transition-colors animate-bounce"
-        aria-label="Scroll to content"
-        data-testid="button-scroll-down"
-      >
-        <ChevronDown className="h-8 w-8" />
-      </button>
+      {/* Bottom stats bar */}
+      <div className="relative z-10 border-t border-white/10 bg-black/40 backdrop-blur-sm">
+        <div className="max-w-7xl mx-auto px-8 lg:px-16 py-5">
+          <div className="flex flex-wrap gap-x-12 gap-y-3">
+            {[
+              { value: "37+", label: "Years in Hospitality" },
+              { value: "3,000+", label: "Hotel Keys Led" },
+              { value: "3", label: "Major Brands Built" },
+              { value: "IPO", label: "Chalet Hotels, 2019" },
+            ].map((stat) => (
+              <div key={stat.label} className="flex items-baseline gap-3">
+                <span className="font-serif text-xl font-bold text-primary">{stat.value}</span>
+                <span className="text-xs text-white/45 tracking-wide uppercase">{stat.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
