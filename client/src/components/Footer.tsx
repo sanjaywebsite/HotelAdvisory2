@@ -8,6 +8,11 @@ export default function Footer() {
       window.location.href = href;
       return;
     }
+    // If on a sub-page (e.g. /gbp), navigate home first then jump to anchor
+    if (window.location.pathname !== "/") {
+      window.location.href = "/" + href;
+      return;
+    }
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
