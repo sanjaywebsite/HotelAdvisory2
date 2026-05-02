@@ -38,7 +38,7 @@ export default function Footer() {
             </p>
             <div className="flex items-center gap-4 mt-4">
               <a
-                href="mailto:contact@sanjaysethi.co"
+                href="mailto:ss@sanjaysethi.co"
                 className="text-background/55 hover:text-background transition-colors"
                 data-testid="footer-email"
               >

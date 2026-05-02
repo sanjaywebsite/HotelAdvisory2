@@ -67,14 +67,14 @@ export default function Contact() {
           {/* Left — contact details, editorial style */}
           <div className="space-y-0 divide-y divide-border">
             <a
-              href="mailto:contact@sanjaysethi.co"
+              href="mailto:ss@sanjaysethi.co"
               className="flex items-start justify-between py-6 group"
               data-testid="link-email"
             >
               <div>
                 <p className="text-xs text-muted-foreground tracking-[0.3em] uppercase mb-1">Email</p>
                 <p className="text-foreground font-medium group-hover:text-primary transition-colors">
-                  contact@sanjaysethi.co
+                  ss@sanjaysethi.co
                 </p>
               </div>
               <ArrowUpRight className="h-4 w-4 text-border group-hover:text-primary transition-colors mt-1 flex-shrink-0" />

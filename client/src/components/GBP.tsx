@@ -87,14 +87,14 @@ export default function GBP() {
             </div>
             <div className="border border-background/15">
               <a
-                href="mailto:contact@sanjaysethi.co"
+                href="mailto:ss@sanjaysethi.co"
                 className="flex items-start justify-between p-8 group"
                 data-testid="link-gbp-email"
               >
                 <div>
                   <p className="text-xs text-background/40 tracking-[0.3em] uppercase mb-1">Email</p>
                   <p className="text-background font-medium group-hover:text-primary transition-colors">
-                    contact@sanjaysethi.co
+                    ss@sanjaysethi.co
                   </p>
                 </div>
                 <ArrowUpRight className="h-4 w-4 text-background/30 group-hover:text-primary transition-colors mt-1 flex-shrink-0" />
