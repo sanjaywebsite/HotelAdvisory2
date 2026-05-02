@@ -6,7 +6,7 @@ const navItems = [
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Experience", href: "#experience" },
-  { label: "Give Back Project (GBP)", href: "/gbp" },
+  { label: "GBP", href: "/gbp" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -15,9 +15,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 60);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -28,10 +26,7 @@ export default function Header() {
       setIsMobileMenuOpen(false);
       return;
     }
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
     setIsMobileMenuOpen(false);
   };
 
@@ -39,31 +34,31 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border"
+          ? "bg-background/96 backdrop-blur-md border-b border-border shadow-sm"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <nav className="flex items-center justify-between h-16 lg:h-20">
+        <nav className="flex items-center justify-between h-16 lg:h-20 gap-4">
           <button
             onClick={() => scrollToSection("#hero")}
-            className="font-serif text-2xl lg:text-4xl font-bold tracking-tight text-left leading-none"
+            className="text-left leading-none flex-shrink-0"
             data-testid="link-logo"
           >
-            <span className={isScrolled ? "text-foreground" : "text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"}>
+            <span className={`block font-serif text-lg lg:text-2xl font-bold tracking-tight ${isScrolled ? "text-foreground" : "text-white drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)]"}`}>
               Dr. Sanjay Sethi
             </span>
-            <span className={`block mt-1 text-base lg:text-lg font-medium ${isScrolled ? "text-primary" : "text-primary drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"}`}>
+            <span className={`block text-xs lg:text-sm font-medium tracking-widest uppercase mt-0.5 ${isScrolled ? "text-primary" : "text-primary drop-shadow-[0_1px_8px_rgba(0,0,0,0.7)]"}`}>
               Advisory
             </span>
           </button>
 
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-sm font-medium transition-colors px-2 py-1 rounded ${
+                className={`text-sm font-medium transition-colors ${
                   isScrolled
                     ? "text-muted-foreground hover:text-foreground"
                     : "text-white/80 hover:text-white"
@@ -75,11 +70,12 @@ export default function Header() {
             ))}
             <Button
               onClick={() => scrollToSection("#contact")}
+              size="sm"
               variant={isScrolled ? "default" : "outline"}
               className={!isScrolled ? "border-white/30 text-white bg-white/10 backdrop-blur-sm" : ""}
               data-testid="button-schedule-consultation"
             >
-              Schedule Consultation
+              Get In Touch
             </Button>
           </div>
 
@@ -95,25 +91,25 @@ export default function Header() {
         </nav>
 
         {isMobileMenuOpen && (
-          <div className="lg:hidden pb-6 bg-background/95 backdrop-blur-md rounded-b-lg">
-            <div className="flex flex-col gap-4 pt-4">
+          <div className="lg:hidden pb-6 bg-background/96 backdrop-blur-md border-t border-border">
+            <div className="flex flex-col pt-4">
               {navItems.map((item) => (
                 <button
                   key={item.label}
                   onClick={() => scrollToSection(item.href)}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground px-4 py-2 text-left"
+                  className="text-sm font-medium text-muted-foreground hover:text-foreground px-4 py-3 text-left border-b border-border/50 last:border-0"
                   data-testid={`link-nav-mobile-${item.label.toLowerCase()}`}
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="px-4 pt-2">
+              <div className="px-4 pt-4">
                 <Button
                   onClick={() => scrollToSection("#contact")}
                   className="w-full"
                   data-testid="button-mobile-schedule"
                 >
-                  Schedule Consultation
+                  Get In Touch
                 </Button>
               </div>
             </div>
