@@ -12,86 +12,88 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative w-full h-screen flex flex-col overflow-hidden bg-black"
+      className="relative w-full h-screen flex flex-col overflow-hidden bg-[#0a0a0a]"
     >
-      {/* Full-bleed background image */}
+      {/* Background hotel image — very dark, central focus */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
 
-      {/* Subtle bottom vignette */}
-      <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/70 to-transparent pointer-events-none" />
+      {/* Directional vignette: darker at edges, slightly lighter centre */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_55%,transparent_0%,rgba(0,0,0,0.55)_100%)]" />
 
-      {/* Top descriptor — right-aligned */}
-      <div className="relative z-10 flex items-start justify-end px-8 lg:px-14 pt-28 lg:pt-32 flex-shrink-0">
+      {/* Top spacer for fixed nav */}
+      <div className="flex-shrink-0 h-14 lg:h-16" />
+
+      {/* Upper area: descriptor right, small overline left */}
+      <div className="relative z-10 flex items-start justify-between px-7 lg:px-14 pt-10 lg:pt-14 flex-shrink-0">
+        <p className="text-white/30 text-xs tracking-[0.35em] uppercase font-medium">
+          Mumbai · India
+        </p>
         <div className="text-right">
-          <p className="text-white/70 text-sm lg:text-base font-light leading-snug">
-            Hospitality Advisor,
+          <p className="text-white/55 text-sm lg:text-base font-light leading-snug">
+            Hospitality Advisor
           </p>
-          <p className="text-white/70 text-sm lg:text-base font-light leading-snug">
+          <p className="text-white/55 text-sm lg:text-base font-light leading-snug">
             Board Director &amp; Investor
           </p>
         </div>
       </div>
 
-      {/* Massive display name — fills the hero */}
-      <div className="relative z-10 flex-1 flex flex-col justify-end pb-10 lg:pb-14 select-none">
-        {/* "Dr." small prefix */}
-        <div className="px-6 lg:px-10 mb-[-0.15em]">
-          <span className="text-white/50 text-xl lg:text-3xl font-light tracking-[0.4em] uppercase">
-            Dr.
-          </span>
+      {/* MAIN: Centered stacked display name — fills the hero vertically */}
+      <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-4">
+
+        {/* "DR." small prefix */}
+        <p className="text-primary text-sm lg:text-base font-semibold tracking-[0.5em] uppercase mb-3 lg:mb-4">
+          Dr.
+        </p>
+
+        {/* SANJAY — line 1 */}
+        <div
+          className="font-sans font-black text-white leading-none tracking-tighter w-full"
+          style={{ fontSize: "clamp(4rem, 16vw, 15rem)" }}
+        >
+          SANJAY
         </div>
 
-        {/* SANJAY — first name, left-anchored */}
-        <div className="px-4 lg:px-6 leading-none">
-          <h1
-            className="font-sans font-black text-white tracking-tighter leading-none"
-            style={{ fontSize: "clamp(3.5rem, 14vw, 13rem)" }}
-          >
-            SANJAY
-          </h1>
+        {/* SETHI — line 2 in gold/primary */}
+        <div
+          className="font-sans font-black text-primary leading-none tracking-tighter w-full"
+          style={{ fontSize: "clamp(4rem, 16vw, 15rem)" }}
+        >
+          SETHI
         </div>
 
-        {/* SETHI — second name row, slightly offset right + gold accent on last letter */}
-        <div className="flex items-baseline justify-between px-4 lg:px-6 leading-none mt-[-0.05em]">
-          <h1
-            className="font-sans font-black text-white tracking-tighter leading-none"
-            style={{ fontSize: "clamp(3.5rem, 14vw, 13rem)" }}
-          >
-            SETHI
-            <span className="text-primary">.</span>
-          </h1>
+        {/* Tagline below name */}
+        <p className="text-white/45 text-xs lg:text-sm tracking-[0.28em] uppercase mt-6 lg:mt-8 max-w-lg">
+          37 Years Building &amp; Leading India's Finest Hospitality Assets
+        </p>
 
-          {/* Bottom-right: credential + CTA */}
-          <div className="flex flex-col items-end gap-3 pb-2">
-            <p className="text-white/45 text-xs tracking-widest uppercase hidden lg:block">
-              37 Years · India Hospitality
-            </p>
-            <button
-              onClick={scrollToContact}
-              className="flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white border border-white/25 hover:border-white/60 rounded-full px-5 py-2.5 transition-all backdrop-blur-sm"
-              data-testid="button-hero-consultation"
-            >
-              Request a Conversation
-            </button>
-            <button
-              onClick={scrollToAbout}
-              className="text-white/40 hover:text-white/70 transition-colors"
-              aria-label="Scroll down"
-              data-testid="button-scroll-down"
-            >
-              <ArrowDown className="h-4 w-4" />
-            </button>
-          </div>
+        {/* CTA */}
+        <div className="flex items-center gap-6 mt-8 lg:mt-10">
+          <button
+            onClick={scrollToContact}
+            className="text-sm font-semibold text-white border border-white/30 hover:border-white hover:text-white rounded-none px-7 py-3 transition-all tracking-wide uppercase"
+            data-testid="button-hero-consultation"
+          >
+            Request a Conversation
+          </button>
+          <button
+            onClick={scrollToAbout}
+            className="text-white/40 hover:text-white/70 transition-colors"
+            aria-label="Scroll down"
+            data-testid="button-scroll-down"
+          >
+            <ArrowDown className="h-5 w-5" />
+          </button>
         </div>
       </div>
 
       {/* Bottom stat strip */}
-      <div className="relative z-10 border-t border-white/10 bg-black/50 backdrop-blur-sm flex-shrink-0">
-        <div className="max-w-7xl mx-auto px-8 lg:px-14 py-4">
-          <div className="flex flex-wrap gap-x-10 gap-y-2">
+      <div className="relative z-10 border-t border-white/10 bg-black/30 backdrop-blur-sm flex-shrink-0">
+        <div className="max-w-7xl mx-auto px-7 lg:px-14 py-4 lg:py-5">
+          <div className="flex flex-wrap gap-x-10 gap-y-2 justify-center lg:justify-start">
             {[
               { value: "37+", label: "Years in Hospitality" },
               { value: "3,000+", label: "Hotel Keys Led" },
@@ -99,8 +101,8 @@ export default function Hero() {
               { value: "Ph.D.", label: "Honoris Causa, 2024" },
             ].map((stat) => (
               <div key={stat.label} className="flex items-baseline gap-2.5">
-                <span className="font-serif text-lg font-bold text-primary">{stat.value}</span>
-                <span className="text-xs text-white/40 tracking-wide uppercase">{stat.label}</span>
+                <span className="font-serif text-base lg:text-lg font-bold text-primary">{stat.value}</span>
+                <span className="text-[11px] text-white/35 tracking-widest uppercase">{stat.label}</span>
               </div>
             ))}
           </div>
