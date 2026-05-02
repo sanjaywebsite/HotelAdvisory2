@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Shield, Landmark, Users, Sparkles } from "lucide-react";
-import heroImage from "@assets/generated_images/luxury_hotel_lobby_interior.png";
+import heroImage from "@assets/image_1777720671934.png";
 
 const credentials = [
   "Former CEO & MD, Chalet Hotels",
