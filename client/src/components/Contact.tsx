@@ -101,7 +101,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-background rounded-md p-8 lg:p-10 border border-border">
+          <div className="bg-background rounded-md p-8 lg:p-10 border border-border shadow-sm">
             {isSubmitted ? (
               <div className="flex flex-col items-center justify-center h-full py-12 text-center">
                 <CheckCircle className="h-16 w-16 text-primary mb-6" />

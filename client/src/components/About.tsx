@@ -17,7 +17,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="py-20 lg:py-32 bg-background">
+    <section id="about" className="py-20 lg:py-32 bg-background relative">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           <div>
@@ -39,7 +39,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="mt-6 p-6 lg:p-8 rounded-md bg-card border border-card-border">
+            <div className="mt-6 p-6 lg:p-8 rounded-md bg-card border border-card-border shadow-sm">
               <p className="text-sm font-medium uppercase tracking-widest text-primary mb-3">
                 Recognition
               </p>
@@ -82,7 +82,7 @@ export default function About() {
               {highlights.map((item) => (
                 <div
                   key={item.label}
-                  className="bg-card border border-card-border rounded-md p-6 lg:p-8 text-center"
+                className="bg-card border border-card-border rounded-md p-6 lg:p-8 text-center shadow-sm"
                   data-testid={`stat-${item.label.toLowerCase().replace(/\s+/g, '-')}`}
                 >
                   <item.icon className="h-8 w-8 text-primary mx-auto mb-4" />
@@ -94,7 +94,7 @@ export default function About() {
               ))}
             </div>
 
-            <div className="mt-6 p-6 lg:p-8 rounded-md bg-card border border-card-border">
+            <div className="mt-6 p-6 lg:p-8 rounded-md bg-card border border-card-border shadow-sm">
               <p className="text-sm font-medium uppercase tracking-widest text-primary mb-3">
                 Executive Positioning
               </p>

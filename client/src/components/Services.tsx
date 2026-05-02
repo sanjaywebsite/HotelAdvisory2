@@ -68,11 +68,11 @@ export default function Services() {
           {services.map((service) => (
             <Card
               key={service.title}
-              className="p-8 lg:p-10 hover-elevate transition-all duration-300"
+              className="p-8 lg:p-10 hover-elevate transition-all duration-300 shadow-sm"
               data-testid={`card-service-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
             >
               <div className="flex items-start gap-4 mb-6">
-                <div className="p-3 rounded-md bg-primary/10">
+                <div className="p-3 rounded-md bg-primary/10 border border-primary/10">
                   <service.icon className="h-6 w-6 text-primary" />
                 </div>
                 <div>

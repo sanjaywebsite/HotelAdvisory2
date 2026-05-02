@@ -61,7 +61,7 @@ export default function Experience() {
                 <div className="absolute left-4 lg:left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary border-4 border-background z-10" />
 
                 <div className={`flex-1 ml-12 lg:ml-0 ${index % 2 === 0 ? "lg:pr-16 lg:text-right" : "lg:pl-16"}`}>
-                  <span className="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-md mb-3">
+                  <span className="inline-block px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-md mb-3 border border-primary/10">
                     {item.highlight}
                   </span>
                   <p className="text-sm text-muted-foreground mb-1">{item.period}</p>

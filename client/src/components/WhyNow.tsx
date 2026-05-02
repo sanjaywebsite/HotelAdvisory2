@@ -45,7 +45,7 @@ export default function WhyNow() {
             {drivers.map((driver) => (
               <div
                 key={driver.title}
-                className="flex gap-4 p-6 rounded-md bg-card border border-card-border"
+              className="flex gap-4 p-6 rounded-md bg-card border border-card-border shadow-sm"
                 data-testid={`driver-${driver.title.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 <div className="p-2.5 h-fit rounded-md bg-primary/10">

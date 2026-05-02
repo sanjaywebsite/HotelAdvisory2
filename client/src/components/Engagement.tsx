@@ -25,7 +25,7 @@ export default function Engagement() {
           {features.map((feature) => (
             <div
               key={feature.label}
-              className="flex items-center gap-2 px-5 py-3 rounded-md bg-background border border-border"
+            className="flex items-center gap-2 px-5 py-3 rounded-md bg-background border border-border shadow-sm"
               data-testid={`engagement-${feature.label.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
             >
               <feature.icon className="h-4 w-4 text-primary" />
