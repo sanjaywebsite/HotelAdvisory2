@@ -50,7 +50,7 @@ export default function Hero() {
       <div className="relative z-10 px-4 lg:px-8 pb-1">
 
         {/* DR. prefix */}
-        <p className="text-primary text-xs lg:text-sm font-bold tracking-[0.55em] uppercase mb-1 px-2 lg:px-3">
+        <p className="text-primary text-2xl lg:text-4xl font-bold tracking-[0.18em] uppercase mb-1 px-2 lg:px-3">
           Dr.
         </p>
 

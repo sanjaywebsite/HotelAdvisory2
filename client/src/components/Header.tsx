@@ -7,7 +7,6 @@ const navItems = [
   { label: "SERVICES", href: "#services" },
   { label: "EXPERIENCE", href: "#experience" },
   { label: "GBP", href: "/gbp" },
-  { label: "CONTACT", href: "#contact" },
 ];
 
 export default function Header() {
@@ -34,35 +33,22 @@ export default function Header() {
     ? "bg-background/97 backdrop-blur-md border-b border-border"
     : "bg-transparent";
 
+  const linkClass = isScrolled
+    ? "text-muted-foreground hover:text-foreground"
+    : "text-white/70 hover:text-white";
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerBg}`}>
       <div className="max-w-full px-6 lg:px-10">
-        <nav className="flex items-center justify-between h-14 lg:h-16 gap-6">
+        <nav className="flex items-center justify-between h-14 lg:h-16">
 
-          {/* Logo — bold boxed name like LMM reference */}
-          <button
-            onClick={() => go("#hero")}
-            className={`font-sans font-black text-sm lg:text-base tracking-tight uppercase border-2 px-3 py-1.5 transition-colors flex-shrink-0 ${
-              isScrolled
-                ? "border-foreground text-foreground"
-                : "border-white text-white"
-            }`}
-            data-testid="link-logo"
-          >
-            DR. SANJAY SETHI
-          </button>
-
-          {/* Desktop nav — uppercase spaced links like LMM */}
+          {/* Left: nav items */}
           <div className="hidden lg:flex items-center gap-7">
             {navItems.map((item) => (
               <button
                 key={item.label}
                 onClick={() => go(item.href)}
-                className={`text-xs font-semibold tracking-widest transition-colors ${
-                  isScrolled
-                    ? "text-muted-foreground hover:text-foreground"
-                    : "text-white/70 hover:text-white"
-                }`}
+                className={`text-xs font-semibold tracking-widest transition-colors ${linkClass}`}
                 data-testid={`link-nav-${item.label.toLowerCase()}`}
               >
                 {item.label}
@@ -70,7 +56,16 @@ export default function Header() {
             ))}
           </div>
 
-          {/* Mobile toggle */}
+          {/* Right: Contact */}
+          <button
+            onClick={() => go("#contact")}
+            className={`hidden lg:block text-xs font-semibold tracking-widest transition-colors ${linkClass}`}
+            data-testid="button-schedule-consultation"
+          >
+            CONTACT
+          </button>
+
+          {/* Mobile hamburger */}
           <Button
             variant="ghost"
             size="icon"
@@ -80,13 +75,15 @@ export default function Header() {
           >
             {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
+          {/* Mobile: spacer so hamburger is on right */}
+          <div className="lg:hidden" />
         </nav>
 
         {/* Mobile menu */}
         {isMobileMenuOpen && (
           <div className="lg:hidden bg-background/97 backdrop-blur-md border-t border-border">
             <div className="flex flex-col py-2">
-              {navItems.map((item) => (
+              {[...navItems, { label: "CONTACT", href: "#contact" }].map((item) => (
                 <button
                   key={item.label}
                   onClick={() => go(item.href)}

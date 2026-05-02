@@ -4,14 +4,14 @@ const services = [
   {
     number: "01",
     title: "Investment Advisory",
-    description: "For capital decisions requiring both operator and owner judgment. Deal framing, underwriting support, operator selection, and risk review across assumptions and capital structure.",
-    tags: ["Deal Framing", "Underwriting", "Operator Selection", "Risk Review"],
+    description: "For capital decisions requiring both operator and owner judgment. Sector analysis, underwriting support, and risk review across assumptions and capital structure.",
+    tags: ["Sector Mapping", "Underwriting Support", "Risk Review"],
   },
   {
     number: "02",
     title: "Operational Excellence",
-    description: "For owners seeking stronger asset performance. KPI review, brand architecture, operating model optimization, and asset repositioning for premium market outcomes.",
-    tags: ["KPI Review", "Brand Architecture", "Operating Model", "Repositioning"],
+    description: "For owners seeking stronger asset performance. Operator selection, KPI review, brand architecture, operating model optimisation, and asset repositioning for premium outcomes.",
+    tags: ["Operator Selection", "KPI Review", "Brand Architecture", "Repositioning"],
   },
   {
     number: "03",
