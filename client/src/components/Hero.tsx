@@ -43,11 +43,6 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.06),rgba(0,0,0,0)_35%),radial-gradient(circle_at_center,rgba(255,193,7,0.10),rgba(0,0,0,0)_50%)]" />
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center pt-20 lg:pt-24">
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-8xl font-bold text-white leading-none mb-8 drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)]">
-          Dr. Sanjay Sethi
-          <span className="block text-primary mt-2">Advisory</span>
-        </h1>
-
         <p className="text-lg md:text-xl lg:text-2xl text-white font-medium max-w-3xl mx-auto mb-8 leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.75)]">
           Senior hospitality advisory with operator and owner perspective.
         </p>

@@ -47,7 +47,7 @@ export default function Header() {
         <nav className="flex items-center justify-between h-16 lg:h-20">
           <button
             onClick={() => scrollToSection("#hero")}
-            className="font-serif text-xl lg:text-2xl font-semibold tracking-tight"
+            className="font-serif text-2xl lg:text-4xl font-bold tracking-tight"
             data-testid="link-logo"
           >
             <span className={isScrolled ? "text-foreground" : "text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.65)]"}>
