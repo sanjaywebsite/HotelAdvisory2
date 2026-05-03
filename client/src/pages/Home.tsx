@@ -5,6 +5,7 @@ import Services from "@/components/Services";
 import WhyNow from "@/components/WhyNow";
 import Engagement from "@/components/Engagement";
 import Experience from "@/components/Experience";
+import HowWeWork from "@/components/HowWeWork";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <WhyNow />
         <Engagement />
         <Experience />
+        <HowWeWork />
         <Contact />
       </main>
       <Footer />

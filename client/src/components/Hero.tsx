@@ -40,9 +40,12 @@ export default function Hero() {
         <p className="text-white/40 text-xs tracking-[0.35em] uppercase font-medium">
           Mumbai · India
         </p>
-        <div className="text-right">
+        <div className="text-right max-w-[260px] lg:max-w-sm">
           <p className="text-white/60 text-sm font-light leading-snug">Hospitality Advisor</p>
           <p className="text-white/60 text-sm font-light leading-snug">Board Director &amp; Investor</p>
+          <p className="hidden md:block text-white/45 text-[11px] lg:text-xs font-light leading-snug mt-2">
+            Advising boards, investors and developers navigating India&rsquo;s hospitality and real estate landscape.
+          </p>
         </div>
       </div>
 

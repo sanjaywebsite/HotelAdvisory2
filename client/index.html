@@ -13,6 +13,21 @@
     <link rel="canonical" href="https://sanjaysethi.co/" />
     <link rel="icon" type="image/png" href="/favicon.png" />
 
+    <style>
+      /* Hide any Replit-injected promo badge across all viewports */
+      replit-badge,
+      [class*="replit-badge"],
+      a[href*="replit.com/?utm"],
+      a[href*="replit.com/refer"],
+      iframe[src*="replit.com/badge"],
+      div[class*="ReplitBadge"] {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+      }
+    </style>
+
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sanjaysethi.co/" />
     <meta property="og:site_name" content="Sanjay Sethi Advisory" />
