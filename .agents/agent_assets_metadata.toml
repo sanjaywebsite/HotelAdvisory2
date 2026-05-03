@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "ZxtVsdfJ6dYNOPC3-AACE"
+uri = "file://client/public/og-image.jpg"
+type = "image"
+title = "OG share image (1200×630)"
