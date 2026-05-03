@@ -16,11 +16,11 @@ const timeline = [
     highlight: "Brand Creation",
   },
   {
-    period: "2015 – 2026",
+    period: "2015 – Jan 2026",
     role: "Managing Director & CEO",
     company: "Chalet Hotels Limited",
     description:
-      "Led a successful IPO, drove asset strategy, and expanded the portfolio to 3,000+ keys across premium properties in partnership with Marriott, Hyatt, Accor, and Taj. Launched lifestyle brand Athiva in 2025.",
+      "Led a successful IPO, drove asset strategy, and expanded the portfolio to 3,000+ keys across premium properties in partnership with Marriott, Hyatt, Accor, and Taj. Launched lifestyle brand Athiva in October 2025.",
     highlight: "IPO Leadership",
   },
   {
