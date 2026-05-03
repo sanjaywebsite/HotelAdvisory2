@@ -1,0 +1,194 @@
+Please improve the current live website at:
+https://hotel-advisory--sanjaysethi.replit.app
+
+This is now the correct current website for “Sanjay Sethi Advisory.” Do not use the older Give Back Project positioning as the main website. The advisory website should remain focused on hospitality investment advisory, board advisory, owner/developer advisory, governance, and strategic counsel.
+
+CURRENT SITE OBSERVATIONS:
+The current site already has a strong premium hero design with Dr. Sanjay Sethi, “Hospitality Advisor / Board Director & Investor,” “37+ Years in Hospitality,” “3,000+ Hotel Keys Led,” “IPO Chalet Hotels, 2019,” and “Ph.D. Honoris Causa, 2024.” Preserve the premium, editorial, high-trust feel, but improve clarity, SEO, mobile responsiveness, and technical correctness.
+
+IMPORTANT TECHNICAL FIXES:
+1. Fix robots.txt. It currently blocks all crawling with:
+   User-agent: *
+   Disallow: /
+
+   Replace with:
+   User-agent: *
+   Allow: /
+   Sitemap: https://sanjaysethi.co/sitemap.xml
+
+2. Fix sitemap.xml. It currently appears to serve the app HTML rather than a real XML sitemap. Create a valid sitemap.xml with the canonical public domain.
+
+3. Fix custom domain mapping:
+   Ensure both:
+   https://sanjaysethi.co
+   https://www.sanjaysethi.co
+   point to this working Replit app and load the same homepage correctly.
+
+4. Add canonical URL:
+   Use https://sanjaysethi.co as the canonical domain.
+
+5. Check and fix any UTF-8 encoding issues. Some punctuation may render or extract incorrectly as characters like â. Ensure em dashes, apostrophes, and special characters are encoded properly.
+
+6. Ensure server handles:
+   GET /
+   HEAD /
+   /robots.txt
+   /sitemap.xml
+   /favicon.png
+   correctly.
+
+7. Ensure the page has enough crawlable content. If the app is client-rendered, make sure important SEO text is present in HTML metadata and consider static/prerendered content where possible.
+
+NAVIGATION FIXES:
+Current navigation includes:
+About, Services, Experience, GBP, Contact
+
+Please revise to:
+About
+Advisory Areas
+Experience
+Engagements
+Contact
+
+Remove or de-emphasize “GBP” from the main navigation unless it is a small secondary/philanthropic page. It should not confuse the advisory positioning.
+
+POSITIONING:
+Keep the site positioned as:
+Sanjay Sethi Advisory
+Senior Hospitality Advisory | Mumbai, India
+
+Core positioning:
+Hospitality investment, owner, developer, board and strategic advisory anchored in 37+ years of operating, building, scaling, investing in and governing hospitality businesses in India.
+
+Suggested hero refinement:
+Headline can remain visually led by the name, but add a clearer supporting line:
+“Senior hospitality advisory for investors, owners, developers and boards.”
+
+Subheadline:
+“Independent counsel across hospitality investments, asset strategy, operator selection, governance and long-term value creation.”
+
+Primary CTA:
+“Request a Conversation”
+
+Secondary CTA:
+“View Advisory Areas”
+
+CONTENT IMPROVEMENTS:
+Please refine the copy so that the advisory offer is immediately clear to institutional investors, hotel owners, developers, boards, family offices and leadership teams.
+
+Advisory areas should be clearly separated into:
+1. Hospitality Investment Advisory
+   - M&A perspective
+   - Sector analysis
+   - Underwriting support
+   - Capital structure and risk review
+   - Operator and brand assumptions
+
+2. Owner & Developer Advisory
+   - Asset strategy
+   - Operator selection
+   - Brand positioning
+   - KPI review
+   - Repositioning and performance improvement
+
+3. Board & Governance Advisory
+   - Board-level counsel
+   - Independent judgment
+   - Governance perspective
+   - Capital allocation
+   - Stakeholder alignment
+
+4. Strategic Foresight
+   - India hospitality cycle mapping
+   - Premiumisation trends
+   - Micro-market analysis
+   - ESG signals
+   - Scenario planning
+
+5. Selective Engagements
+   - Retainer plus deliverables
+   - Limited availability
+   - Confidential senior counsel
+   - Outcome-focused mandates
+
+DESIGN IMPROVEMENTS:
+The current hero is visually strong. Preserve the cinematic/premium editorial style but improve usability.
+
+Please check:
+1. Mobile hero readability.
+2. Whether the large “SANJAY SETHI” text overlaps the face too heavily on smaller screens.
+3. CTA visibility on mobile.
+4. Navigation usability on mobile.
+5. Proof-point strip readability on mobile.
+6. Color contrast on dark image areas.
+7. Whether the Replit badge should be hidden or removed for the final custom domain deployment if allowed.
+
+Visual direction:
+- Premium, senior, boardroom-ready
+- Hospitality investment advisory, not generic consulting
+- Dark editorial hero is acceptable
+- Use restrained gold accent
+- Avoid flashy gradients, generic icons, over-animation, and startup-style clichés
+
+SEO REQUIREMENTS:
+Meta title:
+Sanjay Sethi Advisory | Hospitality Investment & Strategic Advisory
+
+Meta description:
+Senior hospitality advisory for investors, owners, developers and boards across hotel investments, asset strategy, governance and value creation.
+
+Add or verify:
+- Open Graph title
+- Open Graph description
+- Open Graph image
+- Twitter/X card metadata
+- Canonical URL
+- JSON-LD schema for Person
+- JSON-LD schema for ProfessionalService
+- Valid sitemap.xml
+- Search-friendly robots.txt
+- One H1 only
+- Proper heading hierarchy
+- Descriptive alt text for portrait/hero image
+
+CONTACT FORM:
+Keep the enquiry form but ensure it captures:
+- Full name
+- Email
+- Phone
+- Company / organisation
+- Role / designation
+- Nature of enquiry
+- Message
+- Consent checkbox
+
+After submission:
+Show:
+“Thank you for your enquiry. I will respond within 48 hours.”
+
+DISCLAIMER:
+Keep the current disclaimer but polish it:
+“The opinions and views expressed are provided in a personal and independent advisory capacity and do not reflect the views of any current or former employer. Advisory inputs are recommendatory in nature and are not binding unless agreed under a formal engagement.”
+
+FINAL QA:
+Before finishing, test:
+1. Replit preview loads.
+2. sanjaysethi.co loads.
+3. www.sanjaysethi.co loads.
+4. Homepage loads at /.
+5. robots.txt allows crawling.
+6. sitemap.xml is valid XML.
+7. No console errors.
+8. Desktop layout is polished.
+9. Mobile layout is polished.
+10. Contact form works or clearly states how submissions are handled.
+11. GBP is removed from primary navigation or moved to a secondary page.
+12. No old Give Back Project content appears in the main advisory flow.
+
+FINAL RESPONSE:
+Tell me:
+- What technical issues were fixed
+- What SEO changes were made
+- What content/navigation changes were made
+- What design/mobile improvements were made
+- What I still need to verify manually in Replit/domain settings
