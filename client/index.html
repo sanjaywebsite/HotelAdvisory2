@@ -17,16 +17,63 @@
       /* Hide any Replit-injected promo badge across all viewports */
       replit-badge,
       [class*="replit-badge"],
+      [id*="replit-badge"],
       a[href*="replit.com/?utm"],
       a[href*="replit.com/refer"],
+      a[href*="replit.com/@"],
       iframe[src*="replit.com/badge"],
-      div[class*="ReplitBadge"] {
+      iframe[src*="replit.com"],
+      div[class*="ReplitBadge"],
+      div[class*="replitBadge"] {
         display: none !important;
         visibility: hidden !important;
         opacity: 0 !important;
         pointer-events: none !important;
+        width: 0 !important;
+        height: 0 !important;
       }
     </style>
+    <script>
+      // Remove any Replit-injected "Made with Replit" badge that escapes CSS selectors.
+      (function () {
+        var BADGE_RE = /made with replit/i;
+        function nuke(node) {
+          if (!node) return;
+          // Walk up to a likely badge wrapper (anchor, button, or fixed/absolute container)
+          var el = node;
+          for (var i = 0; i < 6 && el && el.parentElement; i++) {
+            var s = el.tagName;
+            if (s === "A" || s === "BUTTON" || s === "ASIDE" || s === "REPLIT-BADGE") break;
+            var cs = window.getComputedStyle ? window.getComputedStyle(el) : null;
+            if (cs && (cs.position === "fixed" || cs.position === "absolute")) break;
+            el = el.parentElement;
+          }
+          try { el.remove(); } catch (e) { try { el.style.display = "none"; } catch (e2) {} }
+        }
+        function scan(root) {
+          if (!root || !root.querySelectorAll) return;
+          var nodes = root.querySelectorAll("body *");
+          for (var i = 0; i < nodes.length; i++) {
+            var n = nodes[i];
+            if (!n || n.children.length > 0) continue;
+            if (n.textContent && BADGE_RE.test(n.textContent)) nuke(n);
+            if (n.shadowRoot) scan(n.shadowRoot);
+          }
+        }
+        function run() {
+          scan(document);
+          // Some badges are added later — observe DOM changes for a while.
+          var obs = new MutationObserver(function () { scan(document); });
+          obs.observe(document.documentElement, { childList: true, subtree: true });
+          setTimeout(function () { obs.disconnect(); }, 30000);
+        }
+        if (document.readyState === "loading") {
+          document.addEventListener("DOMContentLoaded", run);
+        } else {
+          run();
+        }
+      })();
+    </script>
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sanjaysethi.co/" />
