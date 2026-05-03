@@ -14,6 +14,7 @@ export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
+    email: "",
     organisation: "",
     brief: "",
   });
@@ -28,7 +29,7 @@ export default function Contact() {
     // Open user's mail client with the brief pre-filled, so the message reaches the advisory inbox.
     const subject = encodeURIComponent(`Advisory enquiry — ${formData.name}${formData.organisation ? ` (${formData.organisation})` : ""}`);
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nOrganisation: ${formData.organisation}\n\nBrief:\n${formData.brief}`,
+      `Name: ${formData.name}\nEmail: ${formData.email}\nOrganisation: ${formData.organisation}\n\nBrief:\n${formData.brief}`,
     );
     window.location.href = `mailto:${ADVISORY_EMAIL}?subject=${subject}&body=${body}`;
     await new Promise((resolve) => setTimeout(resolve, 600));
@@ -137,6 +138,20 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     data-testid="input-name"
+                  />
+                </div>
+
+                <div className="space-y-1.5">
+                  <Label htmlFor="email" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Email</Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="you@example.com"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    data-testid="input-email"
                   />
                 </div>
 
