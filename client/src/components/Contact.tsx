@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label";
 import { CheckCircle, Mail, ArrowUpRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const ADVISORY_EMAIL = "sanjaysethi.advisory@gmail.com";
+const ADVISORY_EMAIL = "ss@sanjaysethi.co";
 
 export default function Contact() {
   const { toast } = useToast();
