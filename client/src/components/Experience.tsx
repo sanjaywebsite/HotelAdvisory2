@@ -35,7 +35,7 @@ const timeline = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="bg-card border-t border-border">
+    <section id="experience" className="bg-card border-t border-border scroll-mt-16">
       <div className="max-w-7xl mx-auto px-8 lg:px-16 pt-20 lg:pt-28 pb-20 lg:pb-28">
 
         {/* Header */}

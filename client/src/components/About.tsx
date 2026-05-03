@@ -22,7 +22,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="bg-background">
+    <section id="about" className="bg-background scroll-mt-16">
       {/* Pull quote opening — full width, high contrast */}
       <div className="border-b border-border">
         <div className="max-w-7xl mx-auto px-8 lg:px-16 py-20 lg:py-28">

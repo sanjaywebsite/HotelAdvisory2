@@ -3,46 +3,52 @@ import { ArrowUpRight } from "lucide-react";
 const services = [
   {
     number: "01",
-    title: "Investment Advisory",
-    description: "For capital decisions requiring both operator and owner judgment. M&A advisory, sector analysis, underwriting support, and risk review across assumptions and capital structure.",
-    tags: ["M&A Advisory", "Sector Mapping", "Underwriting Support", "Risk Review"],
+    title: "Hospitality Investment Advisory",
+    description: "For capital decisions requiring both operator and owner judgment. M&A perspective, sector analysis, underwriting support, and review of capital structure, risk and operator/brand assumptions.",
+    tags: ["M&A Perspective", "Sector Analysis", "Underwriting Support", "Capital Structure"],
   },
   {
     number: "02",
-    title: "Operational Excellence",
-    description: "For owners seeking stronger asset performance. Operator selection, KPI review, brand architecture, operating model optimisation, and asset repositioning for premium outcomes.",
-    tags: ["Operator Selection", "KPI Review", "Brand Architecture", "Repositioning"],
+    title: "Owner & Developer Advisory",
+    description: "For owners and developers seeking stronger asset performance. Asset strategy, operator selection, brand positioning, KPI review, and repositioning for premium outcomes.",
+    tags: ["Asset Strategy", "Operator Selection", "Brand Positioning", "Repositioning"],
   },
   {
     number: "03",
-    title: "Strategic Foresight",
-    description: "For long-range decisions in a rapidly shifting market. India hospitality landscape mapping, ESG signals, micro-market analysis, and scenario planning for resilience.",
-    tags: ["Market Mapping", "ESG Signals", "Scenario Planning", "Competitive Analysis"],
+    title: "Board & Governance Advisory",
+    description: "For boards and family offices that need clarity, not noise. Board-level counsel, independent judgment, governance perspective, capital allocation and stakeholder alignment.",
+    tags: ["Board Counsel", "Governance", "Capital Allocation", "Stakeholder Alignment"],
   },
   {
     number: "04",
-    title: "Owner & Board Advisory",
-    description: "For boards and family offices that need clarity, not noise. Board-level counsel, capital allocation perspective, governance guidance, and confidential second opinion.",
-    tags: ["Board Counsel", "Governance", "Capital Allocation", "Second Opinion"],
+    title: "Strategic Foresight",
+    description: "For long-range decisions in a rapidly shifting market. India hospitality cycle mapping, premiumisation trends, micro-market analysis, ESG signals and scenario planning.",
+    tags: ["Cycle Mapping", "Premiumisation", "Micro-Market Analysis", "Scenario Planning"],
+  },
+  {
+    number: "05",
+    title: "Selective Engagements",
+    description: "Confidential, senior counsel delivered through a small number of mandates each year. Retainer plus deliverables, outcome-focused and limited by design.",
+    tags: ["Retainer + Deliverables", "Limited Availability", "Confidential", "Outcome-Focused"],
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="bg-background">
+    <section id="advisory" className="bg-background scroll-mt-16">
       {/* Section header */}
       <div className="max-w-7xl mx-auto px-8 lg:px-16 pt-20 lg:pt-28 pb-12">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-border pb-10">
           <div>
             <p className="text-xs font-semibold tracking-[0.35em] uppercase text-primary mb-4">
-              What I Offer
+              Advisory Areas
             </p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground leading-snug max-w-xl">
               Senior Advisory Across the Hotel Value Chain
             </h2>
           </div>
           <p className="text-muted-foreground text-base max-w-xs lg:text-right">
-            A concise, high-trust offering for institutions, owners, developers, and boards.
+            A concise, high-trust offering for institutional investors, owners, developers, boards and family offices.
           </p>
         </div>
       </div>

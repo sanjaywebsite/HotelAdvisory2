@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CheckCircle, ArrowUpRight } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -14,34 +15,45 @@ export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    phone: "",
     company: "",
     designation: "",
+    enquiryType: "",
     message: "",
+    consent: false,
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleDesignationChange = (value: string) => {
-    setFormData((prev) => ({ ...prev, designation: value }));
+  const handleSelectChange = (field: "designation" | "enquiryType") => (value: string) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!formData.consent) {
+      toast({
+        title: "Consent required",
+        description: "Please confirm consent before submitting your enquiry.",
+        variant: "destructive",
+      });
+      return;
+    }
     setIsSubmitting(true);
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log("Form submitted:", formData);
     setIsSubmitting(false);
     setIsSubmitted(true);
     toast({
-      title: "Message Sent",
+      title: "Enquiry received",
       description: "Thank you for your enquiry. I will respond within 48 hours.",
     });
   };
 
   return (
-    <section id="contact" className="bg-background border-t border-border">
+    <section id="contact" className="bg-background border-t border-border scroll-mt-16">
 
       {/* Section header — matches other sections */}
       <div className="max-w-7xl mx-auto px-8 lg:px-16 pt-20 lg:pt-28 pb-12">
@@ -62,7 +74,7 @@ export default function Contact() {
 
       {/* Two-column layout */}
       <div className="max-w-7xl mx-auto px-8 lg:px-16 pb-20 lg:pb-28">
-        <div className="grid lg:grid-cols-[1fr_480px] gap-16 lg:gap-24 items-start">
+        <div className="grid lg:grid-cols-[1fr_520px] gap-16 lg:gap-24 items-start">
 
           {/* Left — contact details, editorial style */}
           <div className="space-y-0 divide-y divide-border">
@@ -117,14 +129,14 @@ export default function Contact() {
                   Thank You
                 </h3>
                 <p className="text-muted-foreground max-w-sm text-sm leading-relaxed">
-                  Your message has been received. I will respond within 48 hours.
+                  Thank you for your enquiry. I will respond within 48 hours.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
-                    <Label htmlFor="name" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Name</Label>
+                    <Label htmlFor="name" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Full Name</Label>
                     <Input
                       id="name"
                       name="name"
@@ -150,33 +162,68 @@ export default function Contact() {
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <Label htmlFor="company" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Company / Organisation</Label>
-                  <Input
-                    id="company"
-                    name="company"
-                    placeholder="Your organisation"
-                    value={formData.company}
-                    onChange={handleChange}
-                    data-testid="input-company"
-                  />
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="phone" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Phone</Label>
+                    <Input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+91 ..."
+                      value={formData.phone}
+                      onChange={handleChange}
+                      data-testid="input-phone"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="company" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Company / Organisation</Label>
+                    <Input
+                      id="company"
+                      name="company"
+                      placeholder="Your organisation"
+                      value={formData.company}
+                      onChange={handleChange}
+                      data-testid="input-company"
+                    />
+                  </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <Label htmlFor="designation" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Designation</Label>
-                  <Select value={formData.designation} onValueChange={handleDesignationChange}>
-                    <SelectTrigger id="designation" data-testid="select-designation">
-                      <SelectValue placeholder="Select your designation" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="investor-pe">Investor / PE Fund</SelectItem>
-                      <SelectItem value="owner-developer">Owner / Developer</SelectItem>
-                      <SelectItem value="owner-ceo">Owner / CEO</SelectItem>
-                      <SelectItem value="board-director">Board Director</SelectItem>
-                      <SelectItem value="senior-management">Senior Management</SelectItem>
-                      <SelectItem value="consultant">Consultant</SelectItem>
-                    </SelectContent>
-                  </Select>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="space-y-1.5">
+                    <Label htmlFor="designation" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Role / Designation</Label>
+                    <Select value={formData.designation} onValueChange={handleSelectChange("designation")}>
+                      <SelectTrigger id="designation" data-testid="select-designation">
+                        <SelectValue placeholder="Select role" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="investor-pe">Investor / PE Fund</SelectItem>
+                        <SelectItem value="owner-developer">Owner / Developer</SelectItem>
+                        <SelectItem value="owner-ceo">Owner / CEO</SelectItem>
+                        <SelectItem value="board-director">Board Director</SelectItem>
+                        <SelectItem value="family-office">Family Office</SelectItem>
+                        <SelectItem value="senior-management">Senior Management</SelectItem>
+                        <SelectItem value="consultant">Consultant</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+                  <div className="space-y-1.5">
+                    <Label htmlFor="enquiryType" className="text-xs tracking-[0.2em] uppercase text-muted-foreground">Nature of Enquiry</Label>
+                    <Select value={formData.enquiryType} onValueChange={handleSelectChange("enquiryType")}>
+                      <SelectTrigger id="enquiryType" data-testid="select-enquiry-type">
+                        <SelectValue placeholder="Select enquiry type" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="investment-advisory">Hospitality Investment Advisory</SelectItem>
+                        <SelectItem value="owner-developer-advisory">Owner & Developer Advisory</SelectItem>
+                        <SelectItem value="board-governance">Board & Governance Advisory</SelectItem>
+                        <SelectItem value="strategic-foresight">Strategic Foresight</SelectItem>
+                        <SelectItem value="selective-engagement">Selective Engagement</SelectItem>
+                        <SelectItem value="speaking-media">Speaking / Media</SelectItem>
+                        <SelectItem value="other">Other</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
                 </div>
 
                 <div className="space-y-1.5">
@@ -192,6 +239,20 @@ export default function Contact() {
                     className="resize-none"
                     data-testid="input-message"
                   />
+                </div>
+
+                <div className="flex items-start gap-3 pt-1">
+                  <Checkbox
+                    id="consent"
+                    checked={formData.consent}
+                    onCheckedChange={(checked) => setFormData((prev) => ({ ...prev, consent: checked === true }))}
+                    data-testid="checkbox-consent"
+                    className="mt-0.5"
+                  />
+                  <Label htmlFor="consent" className="text-xs text-muted-foreground leading-relaxed font-normal cursor-pointer">
+                    I consent to my details being used to respond to this enquiry. Information shared
+                    is treated in confidence and is not used for marketing.
+                  </Label>
                 </div>
 
                 <Button

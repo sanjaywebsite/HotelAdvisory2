@@ -7,7 +7,7 @@ export default function Engagement() {
   };
 
   return (
-    <section className="bg-background border-t border-border">
+    <section id="engagements" className="bg-background border-t border-border scroll-mt-16">
       <div className="max-w-7xl mx-auto px-8 lg:px-16 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 

@@ -8,6 +8,9 @@ export default function Hero() {
   const scrollToContact = () => {
     document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
   };
+  const scrollToAdvisory = () => {
+    document.querySelector("#advisory")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <section
@@ -17,7 +20,7 @@ export default function Hero() {
       {/* Portrait — full bleed, face at top */}
       <img
         src={portraitImage}
-        alt="Dr. Sanjay Sethi"
+        alt="Dr. Sanjay Sethi — Senior Hospitality Advisor, Board Director and Investor, Mumbai, India"
         className="absolute inset-0 w-full h-full object-cover object-top"
         style={{ objectPosition: "50% 15%" }}
       />
@@ -73,16 +76,25 @@ export default function Hero() {
 
           {/* Right: tagline + CTA stacked at bottom-right */}
           <div className="flex flex-col items-end gap-3 pb-3 lg:pb-5 flex-shrink-0 ml-4">
-            <p className="text-white/40 text-[10px] lg:text-xs tracking-widest uppercase hidden lg:block text-right">
-              37 Years · India Hospitality
+            <p className="text-white/55 text-[11px] lg:text-sm font-light tracking-wide hidden md:block text-right max-w-xs leading-snug">
+              Senior hospitality advisory for investors, owners, developers and boards.
             </p>
-            <button
-              onClick={scrollToContact}
-              className="text-xs lg:text-sm font-semibold text-white border border-white/35 hover:border-white rounded-none px-5 lg:px-7 py-2.5 lg:py-3 transition-all tracking-widest uppercase whitespace-nowrap"
-              data-testid="button-hero-consultation"
-            >
-              Request a Conversation
-            </button>
+            <div className="flex items-center gap-2 lg:gap-3">
+              <button
+                onClick={scrollToAdvisory}
+                className="text-xs lg:text-sm font-semibold text-white/85 hover:text-white border border-white/25 hover:border-white/55 rounded-none px-4 lg:px-6 py-2.5 lg:py-3 transition-all tracking-widest uppercase whitespace-nowrap backdrop-blur-sm"
+                data-testid="button-hero-advisory"
+              >
+                Advisory Areas
+              </button>
+              <button
+                onClick={scrollToContact}
+                className="text-xs lg:text-sm font-semibold text-white border border-white/35 hover:border-white rounded-none px-5 lg:px-7 py-2.5 lg:py-3 transition-all tracking-widest uppercase whitespace-nowrap"
+                data-testid="button-hero-consultation"
+              >
+                Request a Conversation
+              </button>
+            </div>
             <button
               onClick={scrollToAbout}
               className="text-white/35 hover:text-white/70 transition-colors"

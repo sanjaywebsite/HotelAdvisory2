@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 const navItems = [
   { label: "ABOUT", href: "#about" },
-  { label: "SERVICES", href: "#services" },
+  { label: "ADVISORY AREAS", href: "#advisory" },
   { label: "EXPERIENCE", href: "#experience" },
-  { label: "GBP", href: "/gbp" },
+  { label: "ENGAGEMENTS", href: "#engagements" },
 ];
 
 export default function Header() {

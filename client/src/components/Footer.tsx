@@ -59,8 +59,9 @@ export default function Footer() {
           <div className="flex flex-wrap gap-x-10 gap-y-3">
             {[
               { label: "About", href: "#about" },
-              { label: "Services", href: "#services" },
+              { label: "Advisory Areas", href: "#advisory" },
               { label: "Experience", href: "#experience" },
+              { label: "Engagements", href: "#engagements" },
               { label: "Contact", href: "#contact" },
               { label: "Give Back Project", href: "/gbp" },
             ].map((item) => (
@@ -78,9 +79,10 @@ export default function Footer() {
 
         <div className="border-t border-background/10 mt-10 pt-8 space-y-4">
           <p className="text-xs text-background/45 text-center max-w-3xl mx-auto leading-relaxed">
-            The opinions and views expressed are given in a personal capacity and do not reflect
-            the opinions or views of any current or former employer. Advisory suggestions are
-            purely recommendatory in nature and are not binding on the recipient.
+            The opinions and views expressed are provided in a personal and independent advisory
+            capacity and do not reflect the views of any current or former employer. Advisory
+            inputs are recommendatory in nature and are not binding unless agreed under a formal
+            engagement.
           </p>
           <p className="text-xs text-background/35 text-center">
             &copy; {currentYear} Dr. Sanjay Sethi Advisory. All rights reserved.
