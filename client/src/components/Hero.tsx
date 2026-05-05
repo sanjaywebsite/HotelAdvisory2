@@ -43,7 +43,7 @@ export default function Hero() {
         <div className="text-right max-w-[260px] lg:max-w-sm">
           <p className="text-white/60 text-sm font-light leading-snug">Hospitality Advisor</p>
           <p className="text-white/60 text-sm font-light leading-snug">Board Director &amp; Investor</p>
-          <p className="hidden md:block text-white/85 text-[13px] lg:text-sm font-normal leading-relaxed mt-3">
+          <p className="text-white/85 text-[11px] md:text-[13px] lg:text-sm font-normal leading-snug md:leading-relaxed mt-2 md:mt-3">
             Advising boards, investors and developers navigating India&rsquo;s hospitality and real estate landscape.
           </p>
         </div>
@@ -79,7 +79,7 @@ export default function Hero() {
 
           {/* Right: tagline + CTA stacked at bottom-right */}
           <div className="flex flex-col items-end gap-3 pb-3 lg:pb-5 flex-shrink-0 ml-4">
-            <p className="text-white text-[13px] lg:text-base font-normal tracking-wide hidden md:block text-right max-w-xs leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
+            <p className="text-white text-[11px] md:text-[13px] lg:text-base font-normal tracking-wide text-right max-w-[180px] md:max-w-xs leading-snug md:leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
               Senior hospitality advisory for investors, owners, developers and boards.
             </p>
             <div className="flex items-center gap-2 lg:gap-3">
