@@ -68,8 +68,8 @@ export default function Hero() {
           SANJAY
         </div>
 
-        {/* SETHI + CTA on same row */}
-        <div className="flex items-end justify-between px-1 lg:px-2">
+        {/* SETHI + CTA — stacked on mobile, side-by-side on desktop */}
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between px-1 lg:px-2 gap-5 lg:gap-0">
           <div
             className="font-sans font-black text-primary leading-[0.88] tracking-tighter"
             style={{ fontSize: "clamp(4.5rem, 18vw, 17rem)" }}
@@ -77,22 +77,22 @@ export default function Hero() {
             SETHI
           </div>
 
-          {/* Right: tagline + CTA stacked at bottom-right */}
-          <div className="flex flex-col items-end gap-3 pb-3 lg:pb-5 flex-shrink-0 ml-4">
-            <p className="text-white text-[11px] md:text-[13px] lg:text-base font-normal tracking-wide text-right max-w-[180px] md:max-w-xs leading-snug md:leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
+          {/* Right: tagline + CTA */}
+          <div className="flex flex-col items-start lg:items-end gap-3 pb-3 lg:pb-5 flex-shrink-0 lg:ml-4 px-2 lg:px-0">
+            <p className="text-white text-[12px] md:text-[13px] lg:text-base font-normal tracking-wide text-left lg:text-right max-w-full md:max-w-xs leading-snug md:leading-relaxed drop-shadow-[0_1px_8px_rgba(0,0,0,0.85)]">
               Senior hospitality advisory for investors, owners, developers and boards.
             </p>
-            <div className="flex items-center gap-2 lg:gap-3">
+            <div className="flex flex-wrap items-center gap-2 lg:gap-3 w-full lg:w-auto">
               <button
                 onClick={scrollToAdvisory}
-                className="text-xs lg:text-sm font-semibold text-white/85 hover:text-white border border-white/25 hover:border-white/55 rounded-none px-4 lg:px-6 py-2.5 lg:py-3 transition-all tracking-widest uppercase whitespace-nowrap backdrop-blur-sm"
+                className="flex-1 lg:flex-none text-xs lg:text-sm font-semibold text-white/85 hover:text-white border border-white/25 hover:border-white/55 rounded-none px-4 lg:px-6 py-2.5 lg:py-3 transition-all tracking-widest uppercase whitespace-nowrap backdrop-blur-sm"
                 data-testid="button-hero-advisory"
               >
                 Advisory Areas
               </button>
               <button
                 onClick={scrollToContact}
-                className="text-xs lg:text-sm font-semibold text-white border border-white/35 hover:border-white rounded-none px-5 lg:px-7 py-2.5 lg:py-3 transition-all tracking-widest uppercase whitespace-nowrap"
+                className="flex-1 lg:flex-none text-xs lg:text-sm font-semibold text-white border border-white/35 hover:border-white rounded-none px-3 lg:px-7 py-2.5 lg:py-3 transition-all tracking-widest uppercase whitespace-nowrap"
                 data-testid="button-hero-consultation"
               >
                 Request a Conversation
@@ -100,7 +100,7 @@ export default function Hero() {
             </div>
             <button
               onClick={scrollToAbout}
-              className="text-white/35 hover:text-white/70 transition-colors"
+              className="text-white/35 hover:text-white/70 transition-colors hidden lg:block"
               aria-label="Scroll down"
               data-testid="button-scroll-down"
             >
