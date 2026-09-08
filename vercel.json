@@ -1,16 +1,11 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "builds": [
-    {
-      "src": "server/index-prod.ts",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
+  "outputDirectory": "dist/public",
+  "rewrites": [
     {
       "src": "/(.*)",
-      "dest": "server/index-prod.ts"
+      "dest": "/index.html"
     }
   ]
 }
